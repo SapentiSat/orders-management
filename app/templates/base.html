@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}{{ product }}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <strong>{{ product }}</strong>
+      <span class="ver">v{{ version }}</span>
+    </div>
+    <nav>
+      <a href="/">Dashboard</a>
+      <a href="/settings">Ustawienia</a>
+      <a href="/license">Licencja</a>
+    </nav>
+  </header>
+  <main class="wrap">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

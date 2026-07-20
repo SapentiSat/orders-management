@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Ustawienia</h1>
+{% if saved %}<p class="ok">Zapisano.</p>{% endif %}
+
+<div class="grid2">
+  <form class="card" method="post" action="/settings/save">
+    <h3>Algorytm / ABC-XYZ / harmonogram</h3>
+    <label>Bufor (dni) <input type="number" name="buffer_days" value="{{ cfg.algorithm.buffer_days }}" /></label>
+    <label>Okno sprzedaży (dni) <input type="number" name="sales_window_days" value="{{ cfg.algorithm.sales_window_days }}" /></label>
+    <label>ABC A% <input type="number" step="0.1" name="a_pct" value="{{ cfg.abc_xyz.a_pct }}" /></label>
+    <label>ABC B% <input type="number" step="0.1" name="b_pct" value="{{ cfg.abc_xyz.b_pct }}" /></label>
+    <label>XYZ X (CV) <input type="number" step="0.01" name="x_cv" value="{{ cfg.abc_xyz.x_cv }}" /></label>
+    <label>XYZ Y (CV) <input type="number" step="0.01" name="y_cv" value="{{ cfg.abc_xyz.y_cv }}" /></label>
+    <label>Dzień raportu
+      <select name="weekday">
+        {% for d in ['monday','tuesday','wednesday','thursday','friday'] %}
+        <option value="{{ d }}" {% if cfg.schedule.weekday==d %}selected{% endif %}>{{ d }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Godzina <input type="number" min="0" max="23" name="hour" value="{{ cfg.schedule.hour }}" /></label>
+    <label>Odbiorcy raportu (csv) <input type="text" name="report_recipients" value="{{ cfg.mail.report_recipients|join(', ') }}" /></label>
+    <label>Odbiorcy alertów (csv) <input type="text" name="alert_recipients" value="{{ cfg.mail.alert_recipients|join(', ') }}" /></label>
+    <button class="btn primary" type="submit">Zapisz</button>
+  </form>
+
+  <form class="card" method="post" action="/upload" enctype="multipart/form-data">
+    <h3>Upload CSV (test zamiast FTP)</h3>
+    <p class="muted">W produkcji: SFTP/FTPS. Tu możesz wgrać 2 pliki testowe.</p>
+    <label>Produkty <input type="file" name="products" accept=".csv" required /></label>
+    <label>Sprzedaż <input type="file" name="sales" accept=".csv" required /></label>
+    <button class="btn" type="submit">Wgraj</button>
+    <p class="muted" style="margin-top:12px">Domyślnie używane są <code>sample_data/*.csv</code>.</p>
+  </form>
+</div>
+
+<section class="card" style="margin-top:16px">
+  <h3>Mapowanie kolumn (zapisane w settings.json)</h3>
+  <pre>{{ cfg.column_map | tojson(indent=2) }}</pre>
+  <p class="muted">Edycja UI mapowania — kolejna iteracja; na razie sample pasuje 1:1.</p>
+</section>
+{% endblock %}

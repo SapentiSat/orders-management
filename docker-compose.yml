@@ -1,0 +1,18 @@
+services:
+  ordersmanagement:
+    build: .
+    container_name: ordersmanagement
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      APP_ENV: production
+      DATA_DIR: /app/data
+      SAMPLE_MODE: "true"
+    volumes:
+      - om_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  om_data:

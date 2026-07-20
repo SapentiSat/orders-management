@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <h1>Dashboard</h1>
+    <p class="muted">Wersja testowa — uruchom pipeline na sample data lub wgranych CSV.</p>
+  </div>
+  <form method="post" action="/run">
+    <button type="submit" class="btn primary">Uruchom teraz</button>
+  </form>
+</section>
+
+<div class="grid3">
+  <article class="card">
+    <h3>Licencja</h3>
+    <p><span class="pill {{ license.mode }}">{{ license.mode }}</span></p>
+    <p class="muted">{{ license.reason }}</p>
+    {% if license.payload %}
+    <p>{{ license.payload.customer }} · max {{ license.payload.max_skus }} SKU · {{ license.payload.edition }}</p>
+    {% endif %}
+  </article>
+  <article class="card">
+    <h3>Ostatni Excel</h3>
+    {% if last_excel %}
+      <p><a href="/exports/{{ last_excel }}">{{ last_excel }}</a></p>
+    {% else %}
+      <p class="muted">Brak — kliknij „Uruchom teraz”.</p>
+    {% endif %}
+  </article>
+  <article class="card">
+    <h3>Harmonogram</h3>
+    <p>{{ schedule.weekday }} {{ '%02d'|format(schedule.hour) }}:00</p>
+    <p class="muted">Cron/FTP/mail — w kolejnych iteracjach; teraz ręczny run.</p>
+  </article>
+</div>
+
+{% if last_run %}
+<section class="card" style="margin-top:16px">
+  <h3>Ostatni run</h3>
+  <p>{{ last_run.message }}</p>
+  {% if last_run.summary %}
+  <div class="stats">
+    <div><b>{{ last_run.summary.rows }}</b><span>SKU</span></div>
+    <div><b>{{ last_run.summary.modes.get('auto-ready', 0) }}</b><span>auto-ready</span></div>
+    <div><b>{{ last_run.summary.modes.get('do weryfikacji', 0) }}</b><span>weryfikacja</span></div>
+    <div><b>{{ last_run.summary.modes.get('skip', 0) }}</b><span>skip</span></div>
+    <div><b>{{ '%.0f'|format(last_run.summary.suggested_value_sum) }}</b><span>wartość sugestii</span></div>
+  </div>
+  {% endif %}
+  {% if last_run.ai_summary %}
+  <div class="ai">{{ last_run.ai_summary }}</div>
+  {% endif %}
+  {% if last_run.preview %}
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>SKU</th><th>Nazwa</th><th>ABC/XYZ</th><th>Tryb</th><th>Sugestia</th><th>Wolny stan</th><th>LT</th><th>Uwagi</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in last_run.preview %}
+        <tr>
+          <td>{{ r.sku }}</td>
+          <td>{{ r.name }}</td>
+          <td>{{ r.ABC_XYZ }}</td>
+          <td><span class="pill mode-{{ r.mode|replace(' ', '-') }}">{{ r.mode }}</span></td>
+          <td>{{ r.suggested_qty }}</td>
+          <td>{{ r.free_stock }}</td>
+          <td>{{ r.lead_time_days }}</td>
+          <td>{{ r.note }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+</section>
+{% endif %}
+
+<section class="card" style="margin-top:16px">
+  <h3>Logi (ostatnie)</h3>
+  {% if logs %}
+  <ul class="logs">
+    {% for l in logs %}
+    <li><span class="lvl {{ l.level }}">{{ l.level }}</span> {{ l.ts }} — {{ l.message }}</li>
+    {% endfor %}
+  </ul>
+  {% else %}
+  <p class="muted">Brak logów.</p>
+  {% endif %}
+</section>
+{% endblock %}
