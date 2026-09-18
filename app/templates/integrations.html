@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% from "macros.html" import info %}
+{% block content %}
+{% set nexo = statuses.get('nexo_connector', {'state':'disabled','message':'','checked_at':''}) %}
+<section class="hero">
+  <div><p class="overline">POŁĄCZENIA SYSTEMOWE</p><h1>Integracje</h1><p class="muted">Źródło danych: Nexo Connector. Wysyłka raportów: SMTP.</p></div>
+  <form method="post" action="/integrations/check"><button class="btn primary">↻ Sprawdź teraz</button></form>
+</section>
+{% if saved %}<p class="ok">Ustawienia integracji zostały zapisane.</p>{% endif %}
+{% if checked %}<p class="ok">Aktywne integracje zostały sprawdzone.</p>{% endif %}
+{% if fetched %}<p class="ok">Pobrano 4 pliki JSON z łącznika Nexo — możesz uruchomić Run lub sprawdzić mapowanie.</p>{% endif %}
+{% if fetch_error %}<p class="err">Błąd pobierania z łącznika: {{ fetch_error }}</p>{% endif %}
+
+<div class="integration-grid">
+  {% set smtp = statuses.smtp %}
+  <a class="integration-tile status-{{ smtp.state }}" href="#mail" data-integration-tab="mail">
+    <div class="integration-icon mail-icon">✉</div>
+    <div class="integration-main"><h3>Poczta SMTP</h3><p>Raporty i alerty e-mail</p></div>
+    <span class="status-badge"><i></i>{{ "Aktywny" if smtp.state == "active" else ("Błąd" if smtp.state == "error" else "Wyłączony") }}</span>
+    <div class="integration-message">{{ smtp.message }}</div>
+    <small>Ostatni test: {{ smtp.checked_at[:16]|replace('T', ' ') if smtp.checked_at else '—' }}</small>
+  </a>
+
+  {% set nexo = statuses.nexo_connector %}
+  <a class="integration-tile status-{{ nexo.state }}" href="#nexo" data-integration-tab="nexo">
+    <div class="integration-icon nexo-icon">N</div>
+    <div class="integration-main"><h3>Nexo Connector</h3><p>SQL → 4 pliki JSON</p></div>
+    <span class="status-badge"><i></i>{{ "Aktywny" if nexo.state == "active" else ("Błąd" if nexo.state == "error" else "Wyłączony") }}</span>
+    <div class="integration-message">{{ nexo.message }}</div>
+    <small>Ostatni test: {{ nexo.checked_at[:16]|replace('T', ' ') if nexo.checked_at else '—' }}</small>
+  </a>
+</div>
+<p class="monitor-note"><span></span> System automatycznie sprawdza aktywne integracje co godzinę. Kliknij kafelek, aby przejść do konfiguracji.</p>
+
+<div class="settings-tabs">
+  <a href="#nexo" data-integration-tab="nexo" class="active">Nexo Connector</a>
+  <a href="#mail" data-integration-tab="mail">Konfiguracja SMTP</a>
+</div>
+<form method="post" action="/integrations/save">
+  <section class="card integration-config active" id="nexo" data-integration-panel="nexo">
+    <div class="card-head">
+      <div>
+        <h3>Nexo Connector</h3>
+        <p>Program na serwerze Windows z dostępem do SQL Nexo. Generuje 4 pliki JSON; panel pobiera je przez API.</p>
+      </div>
+      <span class="status-badge status-inline status-{{ nexo.state }}"><i></i>{{ nexo.state }}</span>
+    </div>
+    <div class="connector-steps">
+      <p><strong>1.</strong> <a class="btn secondary" href="/downloads/nexo-connector" download>Pobierz łącznik (EXE / ZIP)</a></p>
+      <p><strong>2.</strong> Rozpakuj ZIP → uruchom <code>URUCHOM.bat</code> w rozpakowanym folderze (albo z repo: <code>URUCHOM-LACZNIK-NEXO.bat</code>).</p>
+      <p><strong>3.</strong> Otwórz <code>http://127.0.0.1:8765/setup</code> → wklej token poniżej + dane SQL (lub tryb demo).</p>
+      <p><strong>4.</strong> W panelu: <em>Pobierz dane z łącznika</em>.</p>
+    </div>
+    <label style="display:flex;gap:8px;align-items:center;margin-top:12px">
+      <input style="width:auto;margin:0" type="checkbox" name="nexo_enabled" {% if cfg.nexo_connector.enabled %}checked{% endif %}> Włącz integrację Nexo Connector
+    </label>
+    <div class="grid2" style="margin-top:12px">
+      <label><span>Token API {{ info("Ten sam token wklej w oknie /setup łącznika. Web i łącznik muszą się zgadzać.") }}</span>
+        <input name="nexo_api_token" value="{{ cfg.nexo_connector.api_token }}" readonly style="font-family:monospace;font-size:12px">
+      </label>
+      <label style="align-self:end"><span>&nbsp;</span>
+        <button class="btn secondary" type="submit" formaction="/integrations/nexo/regenerate-token" formmethod="post">Wygeneruj nowy token</button>
+      </label>
+    </div>
+    <div class="grid3">
+      <label><span>Adres łącznika {{ info("URL serwera z Nexo, np. http://192.168.1.10:8765") }}</span><input name="nexo_base_url" value="{{ cfg.nexo_connector.base_url }}" placeholder="http://127.0.0.1:8765"></label>
+      <label><span>Magazyny (symbole, przecinek) {{ info("Puste = wszystkie magazyny w eksporcie.") }}</span><input name="nexo_warehouses" value="{{ cfg.nexo_connector.warehouses|join(', ') }}" placeholder="MAG, MAG2"></label>
+      <label><span>Wyklucz typy {{ info("Domyślnie US = usługi bez stanu.") }}</span><input name="nexo_exclude_types" value="{{ cfg.nexo_connector.exclude_types|join(', ') }}"></label>
+      <label><span>Okno sprzedaży (dni)</span><input type="number" name="nexo_sales_days" value="{{ cfg.nexo_connector.sales_days }}" min="30" max="730"></label>
+      <label style="display:flex;gap:8px;align-items:center;padding-top:24px"><input style="width:auto;margin:0" type="checkbox" name="nexo_aggregate" {% if cfg.nexo_connector.aggregate_warehouses %}checked{% endif %}> Sumuj stany z wybranych magazynów</label>
+    </div>
+    <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+      <button class="btn primary" type="submit" formaction="/integrations/nexo/fetch" formmethod="post">↓ Pobierz dane z łącznika</button>
+      <button class="btn secondary" type="submit">Zapisz ustawienia Nexo</button>
+    </div>
+  </section>
+
+  <section class="card integration-config" id="mail" data-integration-panel="mail">
+    <div class="card-head">
+      <div><h3>Poczta SMTP</h3><p>Wysyłka cotygodniowego raportu i osobnych alertów awarii.</p></div>
+      <span class="status-badge status-inline status-{{ smtp.state }}"><i></i>{{ smtp.state }}</span>
+    </div>
+    <div class="grid3">
+      <label><span>Serwer SMTP {{ info("Nazwa hosta serwera pocztowego, np. smtp.office365.com lub smtp.gmail.com.") }}</span><input name="smtp_host" value="{{ cfg.mail.smtp_host }}" placeholder="smtp.office365.com"></label>
+      <label><span>Port {{ info("Najczęściej 587 dla STARTTLS lub 465 dla połączenia SSL.") }}</span><input type="number" name="smtp_port" value="{{ cfg.mail.smtp_port }}"></label>
+      <label><span>Użytkownik {{ info("Login konta używanego do technicznej wysyłki wiadomości.") }}</span><input name="smtp_user" value="{{ cfg.mail.smtp_user }}" placeholder="raport@firma.pl"></label>
+      <label><span>Hasło / app password {{ info("Hasło aplikacyjne konta SMTP. Nie używaj prywatnego hasła, jeśli dostawca obsługuje app passwords.") }}</span><input type="password" name="smtp_password" placeholder="{{ '•••••••• (zapisane)' if cfg.mail.smtp_password else 'Wprowadź hasło' }}"></label>
+    </div>
+  </section>
+  <div style="margin-top:16px"><button class="btn primary" type="submit">Zapisz integracje</button></div>
+</form>
+<script>
+  (() => {
+    const triggers = [...document.querySelectorAll("[data-integration-tab]")];
+    const panels = [...document.querySelectorAll("[data-integration-panel]")];
+
+    function selectIntegration(name, updateHash = true) {
+      const selected = panels.some(panel => panel.dataset.integrationPanel === name) ? name : "nexo";
+      panels.forEach(panel => panel.classList.toggle("active", panel.dataset.integrationPanel === selected));
+      triggers.forEach(trigger => trigger.classList.toggle("active", trigger.dataset.integrationTab === selected));
+      if (updateHash) history.replaceState(null, "", "#" + selected);
+    }
+
+    triggers.forEach(trigger => trigger.addEventListener("click", event => {
+      event.preventDefault();
+      selectIntegration(trigger.dataset.integrationTab);
+      document.querySelector(".settings-tabs").scrollIntoView({ behavior: "smooth", block: "start" });
+    }));
+
+    selectIntegration(location.hash.slice(1) || "nexo", false);
+    window.addEventListener("hashchange", () => selectIntegration(location.hash.slice(1), false));
+  })();
+</script>
+{% endblock %}

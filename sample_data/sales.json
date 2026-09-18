@@ -1,0 +1,5364 @@
+[
+  {
+    "id": "1002",
+    "data": "2025-07-20",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-07-20",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-07-21",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-07-21",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-07-21",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-07-21",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-07-22",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-07-23",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1001",
+    "data": "2025-07-24",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-07-24",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-07-24",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-07-24",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-07-26",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-07-26",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-07-27",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-07-27",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2025-07-28",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-07-28",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-07-28",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-07-28",
+    "ilosc": 4,
+    "wartosc_netto": 64.0,
+    "koszt": 32.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-07-29",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-07-31",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1006",
+    "data": "2025-07-31",
+    "ilosc": 4,
+    "wartosc_netto": 880.0,
+    "koszt": 480.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-07-31",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-01",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-02",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-02",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-03",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-03",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-03",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-04",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-04",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-05",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-06",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-06",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-06",
+    "ilosc": 3,
+    "wartosc_netto": 48.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-08",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-08",
+    "ilosc": 6,
+    "wartosc_netto": 57.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-09",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-09",
+    "ilosc": 5,
+    "wartosc_netto": 90.0,
+    "koszt": 50.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-09",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-10",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-10",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-10",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-11",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-11",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-11",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-08-12",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-12",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-12",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-13",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-13",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-13",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-14",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-14",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-14",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-15",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1006",
+    "data": "2025-08-15",
+    "ilosc": 1,
+    "wartosc_netto": 220.0,
+    "koszt": 120.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-15",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-16",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-16",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-16",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-16",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-17",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-17",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-18",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-18",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-19",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-19",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-20",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-20",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-21",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-21",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-22",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-22",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-23",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-23",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-08-24",
+    "ilosc": 3,
+    "wartosc_netto": 267.0,
+    "koszt": 165.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-24",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-24",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-25",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-25",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-26",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-26",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-26",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-26",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-26",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-27",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-27",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-27",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-27",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-08-29",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-08-30",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-08-30",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-08-30",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-08-30",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-08-31",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-01",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-01",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-02",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-02",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-02",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-09-03",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-03",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-04",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-04",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-05",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-09-05",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-05",
+    "ilosc": 3,
+    "wartosc_netto": 48.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-06",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-09-06",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-06",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-06",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-07",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2025-09-08",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-08",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-09",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-09",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-09",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-09-10",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-10",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-10",
+    "ilosc": 4,
+    "wartosc_netto": 64.0,
+    "koszt": 32.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-11",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-09-11",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-11",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-12",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-12",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-13",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-13",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-13",
+    "ilosc": 3,
+    "wartosc_netto": 48.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-14",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-09-14",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-14",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-15",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-09-15",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-09-15",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-16",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-16",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-18",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-09-18",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-18",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-18",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-20",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-20",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-21",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-21",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-09-21",
+    "ilosc": 4,
+    "wartosc_netto": 1240.0,
+    "koszt": 760.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-22",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-09-22",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-09-23",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-23",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-24",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-25",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-25",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1003",
+    "data": "2025-09-26",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-09-26",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-09-26",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-09-27",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-09-27",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-09-28",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-09-29",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2025-09-30",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-09-30",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-02",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-04",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-04",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-06",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-10-06",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-06",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-10-06",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-06",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-06",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-07",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-08",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-08",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-08",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-09",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-11",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-10-11",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-11",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-12",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-12",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-13",
+    "ilosc": 4,
+    "wartosc_netto": 48.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-10-13",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-14",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-10-15",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-16",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-10-16",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-16",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-17",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-10-17",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-10-17",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-18",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-19",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-19",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-19",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-20",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-10-20",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-20",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-20",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-20",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-21",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-10-22",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-22",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-10-23",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-23",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-10-23",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-25",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-25",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-25",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-25",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-26",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-26",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-27",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-27",
+    "ilosc": 4,
+    "wartosc_netto": 64.0,
+    "koszt": 32.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-10-29",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-29",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-29",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-10-30",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-10-30",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2025-10-31",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-10-31",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-10-31",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-01",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-01",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-01",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-02",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-11-02",
+    "ilosc": 3,
+    "wartosc_netto": 267.0,
+    "koszt": 165.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-02",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-11-02",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-03",
+    "ilosc": 4,
+    "wartosc_netto": 48.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-03",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-11-03",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-04",
+    "ilosc": 4,
+    "wartosc_netto": 72.0,
+    "koszt": 40.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-05",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-05",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-06",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-06",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-07",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-08",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-11-08",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-08",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-11-10",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-10",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-10",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-11",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-11",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-11",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1009",
+    "data": "2025-11-11",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-12",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-12",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-14",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-14",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-14",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-15",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-15",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-16",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-16",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-16",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-17",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-18",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-18",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-19",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-19",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-19",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-20",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-11-20",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-20",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-20",
+    "ilosc": 4,
+    "wartosc_netto": 72.0,
+    "koszt": 40.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-20",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1006",
+    "data": "2025-11-21",
+    "ilosc": 3,
+    "wartosc_netto": 660.0,
+    "koszt": 360.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-22",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-22",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-22",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-23",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-11-23",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-11-23",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-24",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-24",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-11-25",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-27",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-28",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-11-29",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-11-30",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-11-30",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-11-30",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-01",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-01",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-12-02",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-02",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-03",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-03",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-04",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-04",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-12-05",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-05",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-06",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1009",
+    "data": "2025-12-06",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-07",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-08",
+    "ilosc": 6,
+    "wartosc_netto": 72.0,
+    "koszt": 42.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-08",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-12-09",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-09",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-09",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-10",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-10",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-10",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-11",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-12",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-13",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-12-13",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-14",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-14",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-14",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-14",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-15",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-15",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-15",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1009",
+    "data": "2025-12-15",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-16",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2025-12-16",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-17",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-12-17",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-18",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-19",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-12-19",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-19",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-19",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-19",
+    "ilosc": 4,
+    "wartosc_netto": 64.0,
+    "koszt": 32.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-20",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-20",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-21",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-22",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-22",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-23",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1009",
+    "data": "2025-12-23",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-23",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-24",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-24",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1005",
+    "data": "2025-12-25",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-25",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-26",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-26",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-27",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-27",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2025-12-28",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-28",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-28",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1002",
+    "data": "2025-12-29",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1008",
+    "data": "2025-12-29",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-30",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2025-12-31",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2025-12-31",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-01",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-02",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-03",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-03",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-04",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-01-04",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-05",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-05",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-05",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2026-01-05",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-06",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-06",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-01-06",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-01-07",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-07",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-07",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-08",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-08",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-08",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-09",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-09",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-01-09",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-10",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-12",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-12",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-12",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-13",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1006",
+    "data": "2026-01-13",
+    "ilosc": 2,
+    "wartosc_netto": 440.0,
+    "koszt": 240.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-13",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-14",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-14",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-14",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-15",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-15",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-17",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-17",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-18",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-01-18",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-19",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-20",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-20",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-20",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-21",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-21",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-22",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-22",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1010",
+    "data": "2026-01-22",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-23",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-23",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-01-24",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-24",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1009",
+    "data": "2026-01-24",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-25",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1006",
+    "data": "2026-01-25",
+    "ilosc": 1,
+    "wartosc_netto": 220.0,
+    "koszt": 120.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-01-26",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-26",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-26",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-27",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-27",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-28",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-01-28",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-01-29",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-29",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-01-29",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-01-30",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-01-30",
+    "ilosc": 4,
+    "wartosc_netto": 72.0,
+    "koszt": 40.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-30",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1008",
+    "data": "2026-01-31",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-01",
+    "ilosc": 4,
+    "wartosc_netto": 48.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-02-01",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-02",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-03",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-03",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-04",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-04",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-02-05",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-05",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-02-05",
+    "ilosc": 4,
+    "wartosc_netto": 64.0,
+    "koszt": 32.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-06",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-06",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-07",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-07",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-08",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-09",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-09",
+    "ilosc": 5,
+    "wartosc_netto": 70.0,
+    "koszt": 32.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-12",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-02-12",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-13",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-14",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-14",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1006",
+    "data": "2026-02-14",
+    "ilosc": 1,
+    "wartosc_netto": 220.0,
+    "koszt": 120.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-14",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-15",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-16",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-16",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-17",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-02-17",
+    "ilosc": 4,
+    "wartosc_netto": 64.0,
+    "koszt": 32.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-18",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-18",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-18",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-19",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-20",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-20",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-21",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-21",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-22",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-02-22",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-23",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-02-23",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-23",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-02-24",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-25",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-02-25",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-02-27",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-02-27",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-02-28",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-02-28",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-02-28",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-02-28",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-02",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-02",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-03",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-03",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-04",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-04",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-04",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-05",
+    "ilosc": 4,
+    "wartosc_netto": 72.0,
+    "koszt": 40.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-06",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-06",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-06",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-07",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-07",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-07",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-03-07",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-03-08",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-08",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-09",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-09",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-09",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-03-09",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-10",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-11",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-12",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-12",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-13",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-13",
+    "ilosc": 7,
+    "wartosc_netto": 66.5,
+    "koszt": 28.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-14",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-14",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-15",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-16",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-16",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1002",
+    "data": "2026-03-17",
+    "ilosc": 3,
+    "wartosc_netto": 267.0,
+    "koszt": 165.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-18",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-18",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1002",
+    "data": "2026-03-19",
+    "ilosc": 3,
+    "wartosc_netto": 267.0,
+    "koszt": 165.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-19",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-20",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-20",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-21",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-22",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-22",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-22",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-22",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-23",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-23",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-23",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-24",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1006",
+    "data": "2026-03-24",
+    "ilosc": 1,
+    "wartosc_netto": 220.0,
+    "koszt": 120.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-24",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-03-25",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-25",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-03-25",
+    "ilosc": 4,
+    "wartosc_netto": 1240.0,
+    "koszt": 760.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-26",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-03-26",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-27",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-27",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-28",
+    "ilosc": 4,
+    "wartosc_netto": 48.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-28",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-29",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-29",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-03-30",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-30",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-03-31",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-03-31",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-03-31",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-03-31",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1002",
+    "data": "2026-04-01",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-01",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-01",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-01",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-02",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-02",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-04-02",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-03",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-03",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-03",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-04",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-05",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-05",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-06",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-07",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-08",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-08",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-08",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-04-08",
+    "ilosc": 3,
+    "wartosc_netto": 48.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-09",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-10",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-10",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-11",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-12",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-12",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-13",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-14",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-14",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-14",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1009",
+    "data": "2026-04-14",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-04-14",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-16",
+    "ilosc": 6,
+    "wartosc_netto": 57.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-04-16",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-17",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-17",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-18",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-18",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-19",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-19",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-04-19",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-20",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-20",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-20",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-20",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-21",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-21",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-22",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-23",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-23",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-24",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-25",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-25",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-25",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-26",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-27",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-27",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-28",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-04-28",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-04-29",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-04-29",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-29",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-04-30",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-04-30",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-01",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-05-01",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-01",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-01",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-02",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-02",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-03",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-04",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-04",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-04",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-05-04",
+    "ilosc": 2,
+    "wartosc_netto": 620.0,
+    "koszt": 380.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-05",
+    "ilosc": 6,
+    "wartosc_netto": 57.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-07",
+    "ilosc": 5,
+    "wartosc_netto": 60.0,
+    "koszt": 35.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-07",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-07",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1002",
+    "data": "2026-05-09",
+    "ilosc": 3,
+    "wartosc_netto": 267.0,
+    "koszt": 165.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-09",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-10",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-10",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-11",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-11",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-11",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-12",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-12",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-13",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-14",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-14",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-15",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2026-05-15",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-16",
+    "ilosc": 4,
+    "wartosc_netto": 48.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-16",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-16",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-17",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-18",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-19",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-19",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-19",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-19",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-20",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-21",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-21",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-21",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-21",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-22",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-05-22",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-22",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-22",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-23",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-23",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-23",
+    "ilosc": 5,
+    "wartosc_netto": 70.0,
+    "koszt": 32.5
+  },
+  {
+    "id": "1010",
+    "data": "2026-05-23",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-24",
+    "ilosc": 4,
+    "wartosc_netto": 48.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-24",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-24",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-25",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-05-25",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-26",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-05-27",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-27",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-05-27",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-28",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-29",
+    "ilosc": 5,
+    "wartosc_netto": 47.5,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-05-29",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-05-31",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-05-31",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-01",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-01",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-01",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-02",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-02",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-02",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-02",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-03",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-04",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-04",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-04",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-05",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-06",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-06",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-06",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-07",
+    "ilosc": 6,
+    "wartosc_netto": 57.0,
+    "koszt": 24.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-08",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-09",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-10",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-10",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-11",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-11",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-11",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-12",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-13",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-13",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-14",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-15",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-16",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-16",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-17",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-17",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-18",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-18",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-18",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-18",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-19",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-20",
+    "ilosc": 4,
+    "wartosc_netto": 56.0,
+    "koszt": 26.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-06-21",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-21",
+    "ilosc": 1,
+    "wartosc_netto": 9.5,
+    "koszt": 4.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-21",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-06-21",
+    "ilosc": 3,
+    "wartosc_netto": 930.0,
+    "koszt": 570.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-22",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-22",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-22",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-23",
+    "ilosc": 4,
+    "wartosc_netto": 180.0,
+    "koszt": 112.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-06-23",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-06-24",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-06-24",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-06-25",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-25",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-25",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-26",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-06-27",
+    "ilosc": 3,
+    "wartosc_netto": 135.0,
+    "koszt": 84.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-27",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-28",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-28",
+    "ilosc": 4,
+    "wartosc_netto": 72.0,
+    "koszt": 40.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-29",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-06-29",
+    "ilosc": 2,
+    "wartosc_netto": 36.0,
+    "koszt": 20.0
+  },
+  {
+    "id": "1010",
+    "data": "2026-06-29",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-06-30",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-07-01",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-01",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-07-02",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-02",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1002",
+    "data": "2026-07-03",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-03",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-05",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-05",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1001",
+    "data": "2026-07-06",
+    "ilosc": 3,
+    "wartosc_netto": 36.0,
+    "koszt": 21.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-06",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1009",
+    "data": "2026-07-06",
+    "ilosc": 1,
+    "wartosc_netto": 310.0,
+    "koszt": 190.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-07",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-07-07",
+    "ilosc": 3,
+    "wartosc_netto": 54.0,
+    "koszt": 30.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-07-08",
+    "ilosc": 2,
+    "wartosc_netto": 24.0,
+    "koszt": 14.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-07-08",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-08",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-09",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-07-09",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-09",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1010",
+    "data": "2026-07-10",
+    "ilosc": 1,
+    "wartosc_netto": 16.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-07-11",
+    "ilosc": 3,
+    "wartosc_netto": 267.0,
+    "koszt": 165.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-07-11",
+    "ilosc": 2,
+    "wartosc_netto": 90.0,
+    "koszt": 56.0
+  },
+  {
+    "id": "1005",
+    "data": "2026-07-11",
+    "ilosc": 1,
+    "wartosc_netto": 18.0,
+    "koszt": 10.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-11",
+    "ilosc": 2,
+    "wartosc_netto": 28.0,
+    "koszt": 13.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-07-12",
+    "ilosc": 1,
+    "wartosc_netto": 89.0,
+    "koszt": 55.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-12",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-13",
+    "ilosc": 3,
+    "wartosc_netto": 28.5,
+    "koszt": 12.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-07-14",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-14",
+    "ilosc": 3,
+    "wartosc_netto": 42.0,
+    "koszt": 19.5
+  },
+  {
+    "id": "1010",
+    "data": "2026-07-14",
+    "ilosc": 2,
+    "wartosc_netto": 32.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1003",
+    "data": "2026-07-15",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1002",
+    "data": "2026-07-16",
+    "ilosc": 2,
+    "wartosc_netto": 178.0,
+    "koszt": 110.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-16",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1001",
+    "data": "2026-07-17",
+    "ilosc": 1,
+    "wartosc_netto": 12.0,
+    "koszt": 7.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-17",
+    "ilosc": 4,
+    "wartosc_netto": 38.0,
+    "koszt": 16.0
+  },
+  {
+    "id": "1008",
+    "data": "2026-07-17",
+    "ilosc": 1,
+    "wartosc_netto": 14.0,
+    "koszt": 6.5
+  },
+  {
+    "id": "1003",
+    "data": "2026-07-18",
+    "ilosc": 1,
+    "wartosc_netto": 45.0,
+    "koszt": 28.0
+  },
+  {
+    "id": "1004",
+    "data": "2026-07-18",
+    "ilosc": 2,
+    "wartosc_netto": 19.0,
+    "koszt": 8.0
+  }
+]

@@ -2,60 +2,172 @@
 {% block content %}
 <section class="hero">
   <div>
-    <h1>Dashboard</h1>
-    <p class="muted">Wersja testowa — uruchom pipeline na sample data lub wgranych CSV.</p>
+    <p class="overline">CENTRUM DOWODZENIA</p>
+    <h1>Przegląd zamówień</h1>
+    <p class="muted">Sprzedaż, ryzyka magazynowe i rekomendacje w jednym miejscu.</p>
   </div>
   <form method="post" action="/run">
-    <button type="submit" class="btn primary">Uruchom teraz</button>
+    <button type="submit" class="btn primary">↻ Przelicz raport</button>
   </form>
 </section>
 
-<div class="grid3">
-  <article class="card">
-    <h3>Licencja</h3>
-    <p><span class="pill {{ license.mode }}">{{ license.mode }}</span></p>
-    <p class="muted">{{ license.reason }}</p>
-    {% if license.payload %}
-    <p>{{ license.payload.customer }} · max {{ license.payload.max_skus }} SKU · {{ license.payload.edition }}</p>
-    {% endif %}
+<section class="period-control">
+  <div class="period-label"><strong>Zakres danych</strong><span>Wspólny dla wykresów i rankingu</span></div>
+  <div class="period-presets">
+    <a class="{% if selected_range == 'day' %}active{% endif %}" href="/?range=day">Ostatni dzień</a>
+    <a class="{% if selected_range == '7d' %}active{% endif %}" href="/?range=7d">Ostatnie 7 dni</a>
+    <a class="{% if selected_range == 'month' %}active{% endif %}" href="/?range=month">Ostatni miesiąc</a>
+    <a class="{% if selected_range == 'year' %}active{% endif %}" href="/?range=year">Ostatni rok</a>
+    <button type="button" class="{% if selected_range == 'custom' %}active{% endif %}" id="custom-period-toggle">Inny zakres</button>
+  </div>
+  <form class="custom-period {% if selected_range == 'custom' %}active{% endif %}" id="custom-period" method="get" action="/">
+    <input type="hidden" name="range" value="custom">
+    <label>Od <input type="datetime-local" name="start" value="{{ custom_start }}" required></label>
+    <label>Do <input type="datetime-local" name="end" value="{{ custom_end }}" required></label>
+    <button class="btn primary" type="submit">Zastosuj</button>
+  </form>
+</section>
+
+<a class="health-strip" href="/integrations">
+  <div><strong>Stan integracji</strong><span>Automatyczna kontrola co godzinę</span></div>
+  {% for name, label in [('nexo_connector','Nexo'),('smtp','SMTP')] %}
+  {% set item = integration_statuses[name] %}
+  <span class="health-item status-{{ item.state }}"><i></i>{{ label }} <b>{{ "OK" if item.state == "active" else ("BŁĄD" if item.state == "error" else "WYŁ.") }}</b></span>
+  {% endfor %}
+  <span class="health-arrow">›</span>
+</a>
+
+{% if last_run %}
+{% set a = last_run.analytics or {} %}
+{% set cur = a.current or {} %}
+{% set ch = a.changes or {} %}
+{% set summary = last_run.summary or {} %}
+{% set modes = summary.modes or {} %}
+<div class="kpi-grid">
+  <article class="kpi">
+    <div class="kpi-icon blue">↗</div>
+    <div><span>Sprzedaż netto / 7 dni</span><strong>{{ '{:,.0f}'.format(cur.net or 0).replace(',', ' ') }} zł</strong>
+      <small class="{{ 'up' if (ch.net or 0) >= 0 else 'down' }}">{{ '+' if (ch.net or 0) >= 0 else '' }}{{ ch.net or 0 }}% vs poprzedni tydzień</small>
+      <em class="kpi-tip">Kiedy: szybki puls obrotu. Porównaj z poprzednim tygodniem przed zamówieniem.</em></div>
   </article>
-  <article class="card">
-    <h3>Ostatni Excel</h3>
-    {% if last_excel %}
-      <p><a href="/exports/{{ last_excel }}">{{ last_excel }}</a></p>
-    {% else %}
-      <p class="muted">Brak — kliknij „Uruchom teraz”.</p>
-    {% endif %}
+  <article class="kpi">
+    <div class="kpi-icon violet">▦</div>
+    <div><span>Sprzedane sztuki</span><strong>{{ '{:,.0f}'.format(cur.qty or 0).replace(',', ' ') }}</strong>
+      <small class="{{ 'up' if (ch.qty or 0) >= 0 else 'down' }}">{{ '+' if (ch.qty or 0) >= 0 else '' }}{{ ch.qty or 0 }}% vs poprzedni tydzień</small>
+      <em class="kpi-tip">Kiedy: wolumen vs wartość — czy rośnie sztukami, czy tylko ceną.</em></div>
   </article>
-  <article class="card">
-    <h3>Harmonogram</h3>
-    <p>{{ schedule.weekday }} {{ '%02d'|format(schedule.hour) }}:00</p>
-    <p class="muted">Cron/FTP/mail — w kolejnych iteracjach; teraz ręczny run.</p>
+  <article class="kpi kpi-ok">
+    <div class="kpi-icon green">✓</div>
+    <div><span>Auto-ready</span><strong>{{ modes.get('auto-ready', 0) }}</strong><small>pozycje gotowe do decyzji</small>
+      <em class="kpi-tip">Kiedy: start cotygodniowego runu zakupów — te SKU zwykle nie wymagają dyskusji.</em></div>
+  </article>
+  <article class="kpi {% if (modes.get('do weryfikacji', 0) or 0) > 0 %}kpi-warn{% endif %}">
+    <div class="kpi-icon amber">!</div>
+    <div><span>Do weryfikacji</span><strong>{{ modes.get('do weryfikacji', 0) }}</strong><small>wymagają uwagi</small>
+      <em class="kpi-tip">Kiedy: tu wchodzisz najpierw — nietypowy popyt, braki danych, graniczne przypadki.</em></div>
   </article>
 </div>
 
-{% if last_run %}
-<section class="card" style="margin-top:16px">
-  <h3>Ostatni run</h3>
-  <p>{{ last_run.message }}</p>
-  {% if last_run.summary %}
-  <div class="stats">
-    <div><b>{{ last_run.summary.rows }}</b><span>SKU</span></div>
-    <div><b>{{ last_run.summary.modes.get('auto-ready', 0) }}</b><span>auto-ready</span></div>
-    <div><b>{{ last_run.summary.modes.get('do weryfikacji', 0) }}</b><span>weryfikacja</span></div>
-    <div><b>{{ last_run.summary.modes.get('skip', 0) }}</b><span>skip</span></div>
-    <div><b>{{ '%.0f'|format(last_run.summary.suggested_value_sum) }}</b><span>wartość sugestii</span></div>
+<div class="dashboard-grid">
+  <section class="card chart-card span2">
+    <div class="card-head">
+      <div>
+        <h3>Sprzedaż — ostatnie 14 dni</h3>
+        <p>{{ a.period.previous if a.period else '' }} / {{ a.period.current if a.period else '' }}</p>
+        <p class="card-tip">Po co: widać trend dnia po dniu. Kiedy: zanim zmienisz bufor — sprawdź, czy spadek to 1–2 dni, czy fala.</p>
+      </div>
+      <span class="legend"><i></i> wartość netto</span>
+    </div>
+    {% set max_net = (a.daily_sales | map(attribute='net') | max) if a.daily_sales else 1 %}
+    <div class="bar-chart">
+      {% for d in a.daily_sales or [] %}
+      <div class="bar-col" title="{{ d.date }}: {{ d.net }} zł">
+        <span class="bar" style="height: {{ ((d.net / max_net) * 100) if max_net else 0 }}%"></span>
+        {% if loop.index0 % 2 == 0 %}<small>{{ d.date }}</small>{% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="card chart-card">
+    <div class="card-head">
+      <div>
+        <h3>Struktura ABC</h3>
+        <p>udział SKU według wartości</p>
+        <p class="card-tip">Po co: A = najważniejsze. Kiedy: priorytet weryfikacji i zapasu — najpierw klasa A.</p>
+      </div>
+    </div>
+    <div class="donut-wrap">
+      {% set abc_total = (a.abc_distribution | sum(attribute='products')) if a.abc_distribution else 1 %}
+      <div class="donut"><strong>{{ abc_total }}</strong><span>SKU</span></div>
+      <div class="chart-legend">
+        {% for row in a.abc_distribution or [] %}
+        <div><i class="abc-{{ row.ABC|lower }}"></i><span>Klasa {{ row.ABC }}</span><b>{{ row.products }}</b></div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="card span2">
+    <div class="card-head">
+      <div>
+        <h3>Top 10 produktów</h3>
+        <p>najwięcej sprzedanych sztuk w wybranym okresie</p>
+        <p class="card-tip">Po co: szybki ranking wolumenu. Kiedy: spotkanie zakupowe / kontrola hitów — czy top rotuje i ma sensowny zapas (pełne liczby w raporcie Excel).</p>
+      </div>
+      <a href="/reports">Pełny raport →</a>
+    </div>
+    <div class="ranking">
+      {% set max_qty = (a.top_products | map(attribute='qty') | max) if a.top_products else 1 %}
+      {% for p in a.top_products or [] %}
+      <div class="rank-row">
+        <span class="rank">{{ loop.index }}</span>
+        <div class="rank-name"><strong>{{ p.sku }}</strong><small>{{ p.name }}</small></div>
+        <div class="rank-bar"><i style="width: {{ (p.qty / max_qty * 100) if max_qty else 0 }}%"></i></div>
+        <strong>{{ p.qty|round|int }} szt.</strong>
+        <span>{{ '{:,.0f}'.format(p.net).replace(',', ' ') }} zł</span>
+      </div>
+      {% else %}
+      <p class="empty">Brak sprzedaży w tym okresie.</p>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="card action-card">
+    <div class="card-head">
+      <div>
+        <h3>Szybkie akcje</h3>
+        <p>raport i ustawienia</p>
+        <p class="card-tip">Kiedy: po runie — Excel do decyzji, Integracje gdy coś nie działa, Reguły gdy dostrajasz algorytm.</p>
+      </div>
+    </div>
+    {% if last_excel %}<a class="action-link" href="/exports/{{ last_excel }}"><span>⇩</span><div><strong>Pobierz Excel</strong><small>Dashboard + tabela zamówień</small></div></a>{% endif %}
+    <a class="action-link" href="/integrations"><span>✉</span><div><strong>Nexo i SMTP</strong><small>Łącznik danych i wysyłka maili</small></div></a>
+    <a class="action-link" href="/settings"><span>⚙</span><div><strong>Reguły algorytmu</strong><small>Bufor, ABC/XYZ, formuła</small></div></a>
+    <div class="schedule-info"><span>Następny raport</span><strong>{{ schedule.weekday }}, {{ '%02d'|format(schedule.hour) }}:00</strong></div>
+  </section>
+</div>
+
+<section class="card">
+  <div class="card-head">
+    <div>
+      <h3>Podgląd rekomendacji</h3>
+      <p>{{ last_run.message }}</p>
+      <p class="card-tip">Po co: pierwsze 30 SKU z runu. Współczynniki (fioletowe) &gt; 1 lub &lt; 1 = korekta popytu/buforu. Kiedy: szybka kontrola przed Excellem.</p>
+    </div>
+    <a href="/reports">Zobacz wszystkie →</a>
   </div>
-  {% endif %}
-  {% if last_run.ai_summary %}
-  <div class="ai">{{ last_run.ai_summary }}</div>
-  {% endif %}
   {% if last_run.preview %}
   <div class="table-wrap">
     <table>
       <thead>
         <tr>
-          <th>SKU</th><th>Nazwa</th><th>ABC/XYZ</th><th>Tryb</th><th>Sugestia</th><th>Wolny stan</th><th>LT</th><th>Uwagi</th>
+          <th>SKU</th><th>Nazwa</th><th>ABC/XYZ</th><th>Tryb</th><th>Sugestia</th><th>Wolny stan</th><th>LT</th>
+          <th class="th-coeff">Dostępność</th>
+          <th class="th-coeff">Spadek</th>
+          <th class="th-coeff">Sezon</th>
+          <th class="th-coeff">Zmienność</th>
+          <th>Uwagi</th>
         </tr>
       </thead>
       <tbody>
@@ -68,6 +180,10 @@
           <td>{{ r.suggested_qty }}</td>
           <td>{{ r.free_stock }}</td>
           <td>{{ r.lead_time_days }}</td>
+          <td><span class="coeff-badge {% if (r.availability_factor or 1)|float > 1.05 %}hot{% elif (r.availability_factor or 1)|float < 0.95 %}cool{% endif %}">{{ '%.2f'|format(r.availability_factor or 1) }}</span></td>
+          <td><span class="coeff-badge {% if (r.demand_decay_factor or 1)|float < 0.95 %}cool{% elif (r.demand_decay_factor or 1)|float > 1.05 %}hot{% endif %}">{{ '%.2f'|format(r.demand_decay_factor or 1) }}</span></td>
+          <td><span class="coeff-badge {% if (r.seasonality_factor or 1)|float > 1.05 %}hot{% elif (r.seasonality_factor or 1)|float < 0.95 %}cool{% endif %}">{{ '%.2f'|format(r.seasonality_factor or 1) }}</span></td>
+          <td><span class="coeff-badge {% if (r.volatility_factor or 1)|float > 1.05 %}hot{% endif %}">{{ '%.2f'|format(r.volatility_factor or 1) }}</span></td>
           <td>{{ r.note }}</td>
         </tr>
         {% endfor %}
@@ -76,18 +192,21 @@
   </div>
   {% endif %}
 </section>
-{% endif %}
-
-<section class="card" style="margin-top:16px">
-  <h3>Logi (ostatnie)</h3>
-  {% if logs %}
-  <ul class="logs">
-    {% for l in logs %}
-    <li><span class="lvl {{ l.level }}">{{ l.level }}</span> {{ l.ts }} — {{ l.message }}</li>
-    {% endfor %}
-  </ul>
-  {% else %}
-  <p class="muted">Brak logów.</p>
-  {% endif %}
+{% else %}
+<section class="empty-state card">
+  <div>◫</div><h2>Wygeneruj pierwszy raport</h2>
+  <p>System użyje danych demonstracyjnych i pokaże dashboard, wykresy oraz Excel.</p>
+  <form method="post" action="/run"><button class="btn primary">Uruchom raport testowy</button></form>
 </section>
+{% endif %}
+<script>
+  (() => {
+    const button = document.getElementById("custom-period-toggle");
+    const form = document.getElementById("custom-period");
+    if (button && form) button.addEventListener("click", () => {
+      form.classList.toggle("active");
+      button.classList.toggle("active", form.classList.contains("active"));
+    });
+  })();
+</script>
 {% endblock %}

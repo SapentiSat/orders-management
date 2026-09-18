@@ -1,0 +1,323 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="overline">PRZEWODNIK</p>
+    <h1>Dokumentacja</h1>
+    <p class="muted">Sens produktu, logika sugerowanych ilości i przykłady — bez technicznego żargonu.</p>
+  </div>
+</section>
+
+<div class="settings-tabs docs-tabs">
+  <a href="#sense" data-docs-tab="sense" class="active">Sens</a>
+  <a href="#howto" data-docs-tab="howto">Jak korzystać</a>
+  <a href="#logic" data-docs-tab="logic">Logika</a>
+  <a href="#examples" data-docs-tab="examples">Przykłady</a>
+  <a href="#data" data-docs-tab="data">Dane</a>
+  <a href="#report" data-docs-tab="report">Raport</a>
+</div>
+
+{# ——— SENS ——— #}
+<section class="card docs-panel active" data-docs-panel="sense" id="sense">
+  <div class="card-head">
+    <div>
+      <h3>Po co jest Orders Management</h3>
+      <p>Cotygodniowa propozycja zakupów: ile zamówić, żeby nie zabrakło towaru i nie zalegać nadmiernym stanem.</p>
+    </div>
+  </div>
+
+  <div class="docs-why">
+    <article>
+      <strong>Problem</strong>
+      <p>Samą średnią sprzedaży × lead time łatwo się pomylić: czasami brakowało towaru (sprzedaż wygląda na słabą), czasem rynek stygnie mimo pełnej półki, a w drodze jest już PO.</p>
+    </article>
+    <article>
+      <strong>Rozwiązanie</strong>
+      <p>System koryguje popyt współczynnikami, bilansuje stan / w drodze / rezerwacje i dopiero wtedy proponuje ilość (z MOQ).</p>
+    </article>
+    <article>
+      <strong>Dla kogo</strong>
+      <p>Zakupy i planowanie: cotygodniowy Excel + mail z KPI i załącznikiem.</p>
+    </article>
+  </div>
+
+  <div class="docs-viz-balance" aria-hidden="true">
+    <div class="vb need"><b>Potrzeba</b><small>popyt × (LT + bufor)</small></div>
+    <div class="vb minus">−</div>
+    <div class="vb stock"><b>Stan wolny</b></div>
+    <div class="vb minus">−</div>
+    <div class="vb in"><b>W drodze</b></div>
+    <div class="vb minus">−</div>
+    <div class="vb res"><b>Rezerwacje</b></div>
+    <div class="vb eq">=</div>
+    <div class="vb result"><b>Sugestia</b><small>→ MOQ / OI</small></div>
+  </div>
+  <p class="docs-caption">To jest sens całego liczenia: pokryć horyzont dostawy, odejmując to, co już masz lub jest zamówione.</p>
+</section>
+
+{# ——— JAK KORZYSTAĆ ——— #}
+<section class="card docs-panel" data-docs-panel="howto" id="howto">
+  <div class="card-head">
+    <div>
+      <h3>Jak korzystać z panelu</h3>
+      <p>Kolejność, która ma sens przy starcie i przy cotygodniowej pracy.</p>
+    </div>
+  </div>
+
+  <div class="docs-howto">
+    <div class="docs-how">
+      <span>1</span>
+      <div>
+        <strong>Reguły i dane → Dane</strong>
+        <p>Wgraj <strong>produkty</strong> (stan · rezerwacja · dostępne) i <strong>sprzedaż</strong>. Opcjonalnie: <strong>ZD do dostawcy</strong> — wtedy system odejmie towar „w drodze”.</p>
+      </div>
+    </div>
+    <div class="docs-how">
+      <span>2</span>
+      <div>
+        <strong>Mapowanie</strong>
+        <p>Dla każdego pola systemowego wybierz kolumnę z pliku ERP (np. „Stan magazynowy” → <em>StockQty</em>). Bez mapowania system nie wie, która kolumna jest czym.</p>
+      </div>
+    </div>
+    <div class="docs-how">
+      <span>3</span>
+      <div>
+        <strong>Algorytm + Formuła</strong>
+        <p>Ustaw bufor, okna historii, sezonowość. Formułę zostaw domyślną na start — potem możesz ją dostrajać. Opisy zmiennych są pod edytorem.</p>
+      </div>
+    </div>
+    <div class="docs-how">
+      <span>4</span>
+      <div>
+        <strong>Integracje i Powiadomienia</strong>
+        <p>SMTP do maila i Nexo Connector jako źródło danych. Harmonogram: dzień i godzina runu.</p>
+      </div>
+    </div>
+    <div class="docs-how">
+      <span>5</span>
+      <div>
+        <strong>Dashboard → Uruchom / Raporty</strong>
+        <p>Po runie zobaczysz KPI, Top produkty i plik Excel. Kolumna „Sugerowana ilość” + tryb (auto / do weryfikacji / skip).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# ——— LOGIKA ——— #}
+<section class="card docs-panel" data-docs-panel="logic" id="logic">
+  <div class="card-head">
+    <div>
+      <h3>Logika w czterech warstwach</h3>
+      <p>Od historii sprzedaży do gotowej ilości na zamówienie.</p>
+    </div>
+  </div>
+
+  <div class="docs-pipeline">
+    <div class="docs-pipe"><strong>1. Historia</strong><small>Ile sprzedajemy zwykle? Trend w górę czy w dół? Sezon? Czy popyt jest regularny (X) czy skaczący (Z)?</small></div>
+    <div class="docs-arrow">→</div>
+    <div class="docs-pipe coeff"><strong>2. Współczynniki</strong><small>Korekty: brak towaru ≠ brak popytu; spadek mimo stanu; miesiąc; większy bufor przy zmienności.</small></div>
+    <div class="docs-arrow">→</div>
+    <div class="docs-pipe"><strong>3. Popyt dzienny</strong><small>Skorygowana „sztuk na dzień” na horyzont LT + bufor.</small></div>
+    <div class="docs-arrow">→</div>
+    <div class="docs-pipe"><strong>4. Bilans + MOQ</strong><small>Minus stan, w drodze, rezerwacje → zaokrąglenie do minimalnej partii.</small></div>
+  </div>
+
+  <h4 class="docs-sub">Cztery współczynniki — po co</h4>
+  <div class="docs-coeff-grid">
+    <div class="docs-coeff">
+      <b>Dostępność</b>
+      <p>Jeśli w historii wygląda na to, że towaru brakowało, sprzedaż była „sztucznie niska”. Współczynnik podnosi popyt.</p>
+      <span class="docs-tag up">↑ zwiększa sugestię</span>
+    </div>
+    <div class="docs-coeff">
+      <b>Spadek popytu</b>
+      <p>Sprzedaż spada, a stan jest — rynek stygnie. Nie zamawiamy „jak kiedyś”.</p>
+      <span class="docs-tag down">↓ zmniejsza sugestię</span>
+    </div>
+    <div class="docs-coeff">
+      <b>Sezonowość</b>
+      <p>Ten miesiąc zwykle mocniejszy / słabszy niż średnia dla tego SKU.</p>
+      <span class="docs-tag mid">↕ zależnie od miesiąca</span>
+    </div>
+    <div class="docs-coeff">
+      <b>Zmienność</b>
+      <p>Przy nieregularnym popycie (Y/Z) powiększamy bufor bezpieczeństwa.</p>
+      <span class="docs-tag up">↑ większy bufor</span>
+    </div>
+  </div>
+
+  <h4 class="docs-sub">Tryby wyniku</h4>
+  <div class="docs-modes">
+    <div class="mode ok"><strong>auto-ready</strong><p>Propozycja pewna — można iść dalej według procesu firmy.</p></div>
+    <div class="mode warn"><strong>do weryfikacji</strong><p>Warto spojrzeć ludzkim okiem (np. nietypowy SKU, graniczne wartości).</p></div>
+    <div class="mode mute"><strong>skip</strong><p>Brak potrzeby zamówienia (stan wystarcza / nieaktywny / EOL).</p></div>
+  </div>
+</section>
+
+{# ——— PRZYKŁADY ——— #}
+<section class="card docs-panel" data-docs-panel="examples" id="examples">
+  <div class="card-head">
+    <div>
+      <h3>Przykłady liczbowe</h3>
+      <p>Te same reguły, różne sytuacje — widać, jak zmienia się sugestia.</p>
+    </div>
+  </div>
+
+  <article class="docs-example">
+    <header><span class="ex-num">A</span><div><strong>Standardowy SKU</strong><p>Stabilna sprzedaż, jest stan, nic w drodze.</p></div></header>
+    <div class="ex-grid">
+      <div><b>Popyt dzienny</b><span>2 szt.</span></div>
+      <div><b>LT + bufor</b><span>30 + 14 = 44 dni</span></div>
+      <div><b>Potrzeba</b><span>2 × 44 = 88</span></div>
+      <div><b>Wolny stan</b><span>40</span></div>
+      <div><b>W drodze</b><span>0</span></div>
+      <div><b>Sugestia</b><span class="hl">48 szt.</span></div>
+    </div>
+    <p class="ex-note">88 − 40 = 48. Potem zaokrąglenie do MOQ (np. MOQ=12 → nadal 48).</p>
+  </article>
+
+  <article class="docs-example">
+    <header><span class="ex-num">B</span><div><strong>Już zamówione u dostawcy</strong><p>To samo co A, ale w drodze jest 48 szt.</p></div></header>
+    <div class="ex-grid">
+      <div><b>Potrzeba</b><span>88</span></div>
+      <div><b>Wolny stan</b><span>40</span></div>
+      <div><b>W drodze</b><span>48</span></div>
+      <div><b>Sugestia</b><span class="hl">0 (skip)</span></div>
+    </div>
+    <p class="ex-note">88 − 40 − 48 = 0. Bez pliku PO system mógłby zamówić drugi raz.</p>
+  </article>
+
+  <article class="docs-example">
+    <header><span class="ex-num">C</span><div><strong>Stockout w historii</strong><p>Średnia sprzedaży wygląda nisko, bo towaru brakowało.</p></div></header>
+    <div class="ex-grid">
+      <div><b>Baza popytu</b><span>1,5 / dzień</span></div>
+      <div><b>Dostępność</b><span class="coeff">× 1,4</span></div>
+      <div><b>Popyt skorygowany</b><span>2,1 / dzień</span></div>
+      <div><b>Efekt</b><span class="hl">wyższa sugestia</span></div>
+    </div>
+    <p class="ex-note">Bez korekty system „uwierzyłby” w słabą sprzedaż i za mało zamówił.</p>
+  </article>
+
+  <article class="docs-example">
+    <header><span class="ex-num">D</span><div><strong>Rynek stygnie</strong><p>Ostatnie 30 dni dużo słabsze niż 90, a stan jest.</p></div></header>
+    <div class="ex-grid">
+      <div><b>Baza popytu</b><span>3 / dzień</span></div>
+      <div><b>Spadek</b><span class="coeff">× 0,65</span></div>
+      <div><b>Popyt skorygowany</b><span>1,95 / dzień</span></div>
+      <div><b>Efekt</b><span class="hl">niższa sugestia</span></div>
+    </div>
+    <p class="ex-note">Nie dokupujesz „jak w szczycie”, gdy półka się nie rusza.</p>
+  </article>
+
+  <article class="docs-example">
+    <header><span class="ex-num">E</span><div><strong>Zmienność Z</strong><p>Popyt skacze — większy bufor bezpieczeństwa.</p></div></header>
+    <div class="ex-grid">
+      <div><b>Bufor ustawień</b><span>30 dni</span></div>
+      <div><b>Zmienność</b><span class="coeff">× 1,25</span></div>
+      <div><b>Bufor w formule</b><span>37,5 dnia</span></div>
+      <div><b>Efekt</b><span class="hl">więcej zapasu</span></div>
+    </div>
+    <p class="ex-note">Formuła: <code>… + buffer_days × volatility_factor</code> — współczynnik nie mnoży całego popytu, tylko bufor.</p>
+  </article>
+</section>
+
+{# ——— DANE ——— #}
+<section class="card docs-panel" data-docs-panel="data" id="data">
+  <div class="card-head">
+    <div>
+      <h3>Jakie dane i po co</h3>
+      <p>Nie chodzi o format pliku — o sens każdej informacji w liczeniu.</p>
+    </div>
+  </div>
+
+  <div class="docs-data-list">
+    <div class="docs-data required">
+      <div class="dd-head"><b>Produkty</b><span>wymagane</span></div>
+      <p>Kartoteka Nexo: stan, rezerwacja, <strong>dostępne</strong> (IloscDostepna), MOQ, lead time, min. stan. Rezerwacja nie wymaga osobnego pliku.</p>
+      <p class="dd-ex"><strong>Przykład:</strong> dostępne 35 szt. (stan 40 − rezerwacja 5) → w bilansie odejmujesz 35, nie 40.</p>
+    </div>
+    <div class="docs-data required">
+      <div class="dd-head"><b>Sprzedaż</b><span>wymagane</span></div>
+      <p>Historia pozycji FS/PA — tempo sprzedaży, ABC, trendy, sezon.</p>
+      <p class="dd-ex"><strong>Przykład wpływu:</strong> ostatnie 30 dni 2× mocniejsze niż wcześniej → wyższy popyt dzienny.</p>
+    </div>
+    <div class="docs-data">
+      <div class="dd-head"><b>ZD do dostawcy</b><span>opcjonalne</span></div>
+      <p>Otwarte pozycje zamówień — „w drodze”. Suma trafia do <code>inbound_qty</code>.</p>
+      <p class="dd-ex"><strong>Przykład:</strong> potrzeba 88, dostępne 40, w drodze 48 → sugestia 0 (nic nie dokupujesz).</p>
+    </div>
+  </div>
+
+  <div class="docs-callout">
+    <strong>3 pliki zamiast 5:</strong> rezerwacje są kolumną w produktach; ruchy magazynowe na razie nie są wymagane. Szczegóły Nexo: <code>docs/NEXO_EKSPORT.md</code>.
+  </div>
+
+  <div class="docs-callout">
+    <strong>Mapowanie:</strong> w Regułach łączysz „co system rozumie” z „jak nazywa się kolumna u Was”. Jedno mapowanie działa dla wszystkich kolejnych runów, dopóki ERP nie zmieni nazw.
+  </div>
+</section>
+
+{# ——— RAPORT ——— #}
+<section class="card docs-panel" data-docs-panel="report" id="report">
+  <div class="card-head">
+    <div>
+      <h3>Jak czytać wynik</h3>
+      <p>Dashboard w panelu i Excel — te same liczby, inny sposób przeglądania.</p>
+    </div>
+  </div>
+
+  <div class="docs-report-grid">
+    <article>
+      <strong>Dashboard</strong>
+      <p>KPI tygodnia, Top produkty, szybki wgląd „co się dzieje”. Filtry okresu pomagają porównać nettó / koszt / marżę.</p>
+    </article>
+    <article>
+      <strong>Excel — tabela zamówień</strong>
+      <p>Główna lista SKU: sugerowana ilość, tryb, ABC/XYZ, współczynniki i uwagi. Tu decyzja zakupowa.</p>
+    </article>
+    <article>
+      <strong>Excel — Dashboard</strong>
+      <p>Fragmentatory (dostawca, grupa, okres) do pracy z Excela offline / na spotkaniu.</p>
+    </article>
+    <article>
+      <strong>Mail</strong>
+      <p>Skrót + załącznik Excel. Treść wprowadzającą i odbiorców ustawiasz w Powiadomieniach; SMTP w Integracjach.</p>
+    </article>
+  </div>
+
+  <div class="docs-viz-read">
+    <div>
+      <b>Patrz najpierw</b>
+      <ul>
+        <li>SKU z trybem „do weryfikacji”</li>
+        <li>Wysokie sugestie przy klasie A</li>
+        <li>Uwagi przy współczynnikach (dlaczego popyt poszedł w górę/dół)</li>
+      </ul>
+    </div>
+    <div>
+      <b>Potem dostrój</b>
+      <ul>
+        <li>Bufor i progi w Algorytmie</li>
+        <li>Formułę (ostrożnie — zmienne mają opisy w ustawieniach)</li>
+        <li>Jakość danych (mapowanie, kompletność PO / rezerwacji)</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<script>
+  (() => {
+    const tabs = [...document.querySelectorAll("[data-docs-tab]")];
+    const panels = [...document.querySelectorAll("[data-docs-panel]")];
+    function select(name) {
+      const id = panels.some(p => p.dataset.docsPanel === name) ? name : "sense";
+      panels.forEach(p => p.classList.toggle("active", p.dataset.docsPanel === id));
+      tabs.forEach(t => t.classList.toggle("active", t.dataset.docsTab === id));
+      history.replaceState(null, "", "#" + id);
+    }
+    tabs.forEach(t => t.addEventListener("click", e => { e.preventDefault(); select(t.dataset.docsTab); }));
+    select(location.hash.slice(1) || "sense");
+    window.addEventListener("hashchange", () => select(location.hash.slice(1)));
+  })();
+</script>
+{% endblock %}

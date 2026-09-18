@@ -1,0 +1,22 @@
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+.env
+data/
+exports/
+logs/
+uploads/
+DANE POBRANE Z BAZY/
+connector/__pycache__/
+connector/dist/
+connector/data/
+*.xlsx
+*.log
+docs/
+scripts/
+agent-transcripts/
+.cursor/

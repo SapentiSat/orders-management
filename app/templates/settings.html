@@ -1,43 +1,179 @@
 {% extends "base.html" %}
+{% from "macros.html" import info %}
 {% block content %}
-<h1>Ustawienia</h1>
-{% if saved %}<p class="ok">Zapisano.</p>{% endif %}
+<section class="hero"><div><p class="overline">KONFIGURACJA</p><h1>Reguły i dane</h1><p class="muted">Algorytm, formuła sugerowanej ilości, dane i mapowanie kolumn.</p></div></section>
+{% if saved %}<p class="ok">Ustawienia zostały zapisane.</p>{% endif %}
+{% if mapping_saved %}<p class="ok">Mapowanie kolumn zostało zapisane.</p>{% endif %}
+{% if uploaded %}<p class="ok">Pliki wgrano — uzupełnij mapowanie (listy z polami z pliku).</p>{% endif %}
 
-<div class="grid2">
-  <form class="card" method="post" action="/settings/save">
-    <h3>Algorytm / ABC-XYZ / harmonogram</h3>
-    <label>Bufor (dni) <input type="number" name="buffer_days" value="{{ cfg.algorithm.buffer_days }}" /></label>
-    <label>Okno sprzedaży (dni) <input type="number" name="sales_window_days" value="{{ cfg.algorithm.sales_window_days }}" /></label>
-    <label>ABC A% <input type="number" step="0.1" name="a_pct" value="{{ cfg.abc_xyz.a_pct }}" /></label>
-    <label>ABC B% <input type="number" step="0.1" name="b_pct" value="{{ cfg.abc_xyz.b_pct }}" /></label>
-    <label>XYZ X (CV) <input type="number" step="0.01" name="x_cv" value="{{ cfg.abc_xyz.x_cv }}" /></label>
-    <label>XYZ Y (CV) <input type="number" step="0.01" name="y_cv" value="{{ cfg.abc_xyz.y_cv }}" /></label>
-    <label>Dzień raportu
-      <select name="weekday">
-        {% for d in ['monday','tuesday','wednesday','thursday','friday'] %}
-        <option value="{{ d }}" {% if cfg.schedule.weekday==d %}selected{% endif %}>{{ d }}</option>
-        {% endfor %}
-      </select>
-    </label>
-    <label>Godzina <input type="number" min="0" max="23" name="hour" value="{{ cfg.schedule.hour }}" /></label>
-    <label>Odbiorcy raportu (csv) <input type="text" name="report_recipients" value="{{ cfg.mail.report_recipients|join(', ') }}" /></label>
-    <label>Odbiorcy alertów (csv) <input type="text" name="alert_recipients" value="{{ cfg.mail.alert_recipients|join(', ') }}" /></label>
-    <button class="btn primary" type="submit">Zapisz</button>
-  </form>
-
-  <form class="card" method="post" action="/upload" enctype="multipart/form-data">
-    <h3>Upload CSV (test zamiast FTP)</h3>
-    <p class="muted">W produkcji: SFTP/FTPS. Tu możesz wgrać 2 pliki testowe.</p>
-    <label>Produkty <input type="file" name="products" accept=".csv" required /></label>
-    <label>Sprzedaż <input type="file" name="sales" accept=".csv" required /></label>
-    <button class="btn" type="submit">Wgraj</button>
-    <p class="muted" style="margin-top:12px">Domyślnie używane są <code>sample_data/*.csv</code>.</p>
-  </form>
+<div class="settings-tabs">
+  <a href="#algorithm" data-settings-tab="algorithm">Algorytm</a>
+  <a href="#formula" data-settings-tab="formula">Formuła</a>
+  <a href="#abc" data-settings-tab="abc">ABC / XYZ</a>
+  <a href="#schedule" data-settings-tab="schedule">Harmonogram</a>
+  <a href="#data" data-settings-tab="data">Dane</a>
+  <a href="#mapping" data-settings-tab="mapping">Mapowanie</a>
 </div>
 
-<section class="card" style="margin-top:16px">
-  <h3>Mapowanie kolumn (zapisane w settings.json)</h3>
-  <pre>{{ cfg.column_map | tojson(indent=2) }}</pre>
-  <p class="muted">Edycja UI mapowania — kolejna iteracja; na razie sample pasuje 1:1.</p>
+<form method="post" action="/settings/save" id="rules-form">
+  <section class="card settings-panel" data-settings-panel="algorithm" id="algorithm">
+    <div class="card-head"><div><h3>Algorytm zamówień</h3><p>Bufor i progi — wpływają na współczynniki i horyzont pokrycia.</p></div></div>
+    <div class="grid2">
+      <label><span>Bufor bezpieczeństwa (dni) {{ info("Po co: dodatkowe dni zapasu ponad lead time. Kiedy: opóźnienia dostaw, weekendy. Przykład: LT 30 + bufor 14 = 44 dni przed korektą zmienności.") }}</span><input type="number" name="buffer_days" value="{{ cfg.algorithm.buffer_days }}"></label>
+      <label><span>Okno historii sprzedaży (dni) {{ info("Po co: jak daleko wstecz patrzy średnia i trendy. Kiedy: krócej = szybsza reakcja, dłużej = spokojniej. Przykład: 90 dni przy sezonowym asortymencie.") }}</span><input type="number" name="sales_window_days" value="{{ cfg.algorithm.sales_window_days }}"></label>
+      <label><span>Próg spadku popytu {{ info("Po co: od jakiego spadku 30/90 dni włącza się mnożnik spadku. Kiedy: rynek stygnie, a stan jest. Przykład: próg 0,75 — jeśli 30 dni to 50% z 90, popyt idzie w dół.") }}</span><input type="number" step="0.01" name="decay_threshold" value="{{ cfg.algorithm.decay_threshold }}"></label>
+      <label><span>Siła korekty stockout {{ info("Po co: jak mocno podnieść popyt przy braku towaru w historii. Kiedy: bywały braki na stanie. Przykład: 0,8 przy dużym stockout → availability nawet ~1,8.") }}</span><input type="number" step="0.05" name="availability_strength" value="{{ cfg.algorithm.availability_strength }}"></label>
+    </div>
+    <label class="ai-toggle" style="margin-top:8px">
+      <input type="checkbox" name="seasonality_enabled" {% if cfg.algorithm.seasonality_enabled %}checked{% endif %}>
+      <span><strong>Sezonowość</strong><small>Kiedy: asortyment ma miesiące mocniejsze/słabsze. Wyłącz, jeśli sprzedaż jest płaska przez rok.</small></span>
+    </label>
+  </section>
+
+  <section class="card settings-panel" data-settings-panel="formula" id="formula">
+    <div class="card-head"><div><h3>Formuła sugerowanej ilości</h3><p>Złóż bilans zakupowy. Współczynniki (fioletowe) korygują popyt lub bufor — zmienne (niebieskie) to dane z ERP / ustawień.</p></div></div>
+    <label><span>Wyrażenie {{ info("Dozwolone: + − * / ( ) oraz nazwy poniżej. Wynik ujemny → 0, potem MOQ / OI.") }}</span>
+      <textarea name="order_formula" rows="4" class="formula-input">{{ cfg.algorithm.order_formula or default_formula }}</textarea>
+    </label>
+    <p class="muted">Domyślnie: <code class="mono">{{ default_formula }}</code></p>
+    <div class="formula-legend">
+      <span><i class="lg-var"></i> Zmienna — dane / bilans</span>
+      <span><i class="lg-coeff"></i> Współczynnik — mnożnik algorytmu (podświetlony)</span>
+    </div>
+    <div class="formula-vars">
+      {% for v in formula_variables %}
+      <button type="button" class="var-chip {% if v.kind == 'coefficient' %}coeff{% else %}var{% endif %}" data-var="{{ v.key }}" title="{{ v.hint }}">{{ v.key }}</button>
+      {% endfor %}
+    </div>
+    <p class="muted" style="margin-top:10px">Kliknij token, aby wstawić go do formuły. Poniżej: po co, kiedy i prosty przykład.</p>
+    <div class="formula-docs">
+      {% for v in formula_variables %}
+      <article class="formula-doc {% if v.kind == 'coefficient' %}coeff{% else %}var{% endif %}">
+        <header>
+          <code>{{ v.key }}</code>
+          <span class="kind-tag">{{ "Współczynnik" if v.kind == "coefficient" else "Zmienna" }}</span>
+          {% if v.label %}<span class="formula-label">{{ v.label }}</span>{% endif %}
+        </header>
+        <p><strong>Po co:</strong> {{ v.description }}</p>
+        <p class="when"><strong>Kiedy:</strong> {{ v.when }}</p>
+        <p class="ex"><strong>Przykład:</strong> {{ v.example }}</p>
+        <div class="calc">{{ v.calc }}</div>
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section class="card settings-panel" data-settings-panel="abc" id="abc">
+    <div class="card-head"><div><h3>Klasyfikacja ABC / XYZ</h3><p>Progi ważności i przewidywalności.</p></div></div>
+    <div class="grid2">
+      <label><span>Próg klasy A (%) {{ info("Skumulowany udział sprzedaży klasy A.") }}</span><input type="number" step="0.1" name="a_pct" value="{{ cfg.abc_xyz.a_pct }}"></label>
+      <label><span>Próg klasy B (%) {{ info("Koniec klasy B; reszta = C.") }}</span><input type="number" step="0.1" name="b_pct" value="{{ cfg.abc_xyz.b_pct }}"></label>
+      <label><span>Próg X (CV) {{ info("Max CV dla stabilnego X.") }}</span><input type="number" step="0.01" name="x_cv" value="{{ cfg.abc_xyz.x_cv }}"></label>
+      <label><span>Próg Y (CV) {{ info("Max CV dla Y; wyżej = Z.") }}</span><input type="number" step="0.01" name="y_cv" value="{{ cfg.abc_xyz.y_cv }}"></label>
+    </div>
+  </section>
+
+  <section class="card settings-panel" data-settings-panel="schedule" id="schedule">
+    <div class="card-head"><div><h3>Harmonogram raportu</h3><p>Kiedy ma uruchamiać się cotygodniowy proces.</p></div></div>
+    <div class="grid2">
+      <label><span>Dzień tygodnia {{ info("Dzień automatycznego runu.") }}</span><select name="weekday">{% for d in ['monday','tuesday','wednesday','thursday','friday'] %}<option value="{{ d }}" {% if cfg.schedule.weekday==d %}selected{% endif %}>{{ d }}</option>{% endfor %}</select></label>
+      <label><span>Godzina {{ info("Strefa serwera / Europe/Warsaw na VPS.") }}</span><input type="number" min="0" max="23" name="hour" value="{{ cfg.schedule.hour }}"></label>
+    </div>
+  </section>
+  <div class="settings-save"><button class="btn primary" type="submit">Zapisz ustawienia</button></div>
+</form>
+
+<section class="card settings-panel" data-settings-panel="data" id="data">
+  <div class="card-head"><div><h3>Pliki danych</h3><p>Wymagane: <strong>produkty</strong> (stan, rezerwacja, dostępne) + <strong>sprzedaż</strong>. Opcjonalnie: <strong>ZD do dostawcy</strong> (w drodze).</p></div><span class="pill">JSON</span></div>
+  <form method="post" action="/upload" enctype="multipart/form-data">
+    <div class="upload-grid upload-grid-3">
+      <label class="upload-box"><span class="upload-icon">▦</span><strong>Produkty *</strong><small>Stan · rezerwacja · dostępne</small><input type="file" name="products" accept=".json,.csv,application/json" required><span class="file-button">Wybierz</span></label>
+      <label class="upload-box"><span class="upload-icon">↗</span><strong>Sprzedaż *</strong><small>Historia pozycji</small><input type="file" name="sales" accept=".json,.csv,application/json" required><span class="file-button">Wybierz</span></label>
+      <label class="upload-box"><span class="upload-icon">⇄</span><strong>ZD do dostawcy</strong><small>Otwarte pozycje (w drodze)</small><input type="file" name="purchase_orders" accept=".json,.csv,application/json"><span class="file-button">Wybierz</span></label>
+    </div>
+    <button class="btn primary" type="submit">Wgraj i przejdź do mapowania</button>
+  </form>
 </section>
+
+<section class="card settings-panel" data-settings-panel="mapping" id="mapping">
+  <div class="card-head">
+    <div>
+      <h3>Mapowanie kolumn</h3>
+      <p>Pole systemowe → pole z pliku (lista rozwijana). Wymagane oznaczone *.</p>
+    </div>
+    <span class="pill">{{ 'UPLOAD' if source_columns.using_uploads else 'SAMPLE' }}</span>
+  </div>
+
+  <form method="post" action="/settings/mapping" class="mapping-form">
+    {% for dataset, label in dataset_labels.items() %}
+    {% set cols = source_columns.get(dataset, []) %}
+    {% set src_name = source_columns.get(dataset ~ '_source', source_columns.products_source if dataset=='products' else (source_columns.sales_source if dataset=='sales' else '')) %}
+    <div class="mapping-block">
+      <h4>{{ label }} <span class="pill">{{ cols|length }} pól</span></h4>
+      <p class="muted mono">{{ src_name or 'brak pliku — zmapuj po wgraniu' }}</p>
+      {% if cols %}
+      <div class="mapping-table">
+        <div class="mapping-head"><span>Pole systemowe</span><span>Pole w pliku</span></div>
+        {% for field in fields[dataset] %}
+        <div class="mapping-row {% if field.required %}required{% endif %}">
+          <div class="mapping-system">
+            <strong>{{ field.label }}{% if field.required %} <em>*</em>{% endif %}</strong>
+            <code>{{ field.key }}</code>
+            {{ info(field.hint) }}
+            <small>{{ field.hint }}</small>
+          </div>
+          <label class="mapping-select">
+            <select name="{{ dataset }}__{{ field.key }}" {% if field.required and dataset in ['products','sales'] %}required{% endif %}>
+              <option value="">— nie zmapowano —</option>
+              {% for col in cols %}
+              <option value="{{ col }}" {% if cfg.column_map[dataset].get(field.key) == col %}selected{% endif %}>{{ col }}</option>
+              {% endfor %}
+            </select>
+          </label>
+        </div>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="empty">Brak kolumn — wgraj plik w zakładce Dane.</p>
+      {% for field in fields[dataset] %}
+      <input type="hidden" name="{{ dataset }}__{{ field.key }}" value="{{ cfg.column_map[dataset].get(field.key, '') }}">
+      {% endfor %}
+      {% endif %}
+    </div>
+    {% endfor %}
+    <button class="btn primary" type="submit">Zapisz mapowanie</button>
+  </form>
+</section>
+
+<script>
+  (() => {
+    const triggers = [...document.querySelectorAll("[data-settings-tab]")];
+    const panels = [...document.querySelectorAll("[data-settings-panel]")];
+    const save = document.querySelector(".settings-save");
+    function select(name, updateHash = true) {
+      const selected = panels.some(p => p.dataset.settingsPanel === name) ? name : "algorithm";
+      panels.forEach(p => p.classList.toggle("active", p.dataset.settingsPanel === selected));
+      triggers.forEach(t => t.classList.toggle("active", t.dataset.settingsTab === selected));
+      if (save) save.hidden = !["algorithm", "formula", "abc", "schedule"].includes(selected);
+      if (updateHash) history.replaceState(null, "", "#" + selected);
+    }
+    triggers.forEach(t => t.addEventListener("click", e => { e.preventDefault(); select(t.dataset.settingsTab); }));
+    select(location.hash.slice(1) || "algorithm", false);
+    window.addEventListener("hashchange", () => select(location.hash.slice(1), false));
+    document.querySelectorAll('input[type="file"]').forEach(input => input.addEventListener("change", () => {
+      const button = input.parentElement.querySelector(".file-button");
+      if (button) button.textContent = input.files[0]?.name || "Wybierz";
+    }));
+    const formula = document.querySelector(".formula-input");
+    document.querySelectorAll(".var-chip").forEach(btn => btn.addEventListener("click", () => {
+      if (!formula) return;
+      const token = btn.dataset.var;
+      const start = formula.selectionStart || formula.value.length;
+      const end = formula.selectionEnd || start;
+      formula.value = formula.value.slice(0, start) + token + formula.value.slice(end);
+      formula.focus();
+      formula.selectionStart = formula.selectionEnd = start + token.length;
+    }));
+  })();
+</script>
 {% endblock %}

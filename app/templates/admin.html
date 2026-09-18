@@ -1,0 +1,106 @@
+{% extends "admin_base.html" %}
+{% from "macros.html" import info %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="overline">VENDOR / LICENCJE</p>
+    <h1>Wszystkie firmy i klucze</h1>
+    <p class="muted">Tu tylko Ty: lista klientów, ważność, limity i pełne tokeny do przekazania firmom.</p>
+  </div>
+  <div class="kpi-grid" style="max-width:420px">
+    <article class="card kpi"><span>Firm / kluczy</span><strong>{{ history|length }}</strong></article>
+    <article class="card kpi"><span>Aktywne sesje</span><strong>1</strong><small>vendor admin</small></article>
+  </div>
+</section>
+
+{% if issued_key %}
+<section class="card" style="margin-bottom:14px">
+  <p class="ok">Wygenerowano klucz dla: {{ issued_meta.customer }}</p>
+  <label><span>Klucz do przekazania klientowi</span>
+    <textarea rows="4" readonly onclick="this.select()">{{ issued_key }}</textarea>
+  </label>
+  <p class="muted">Edycja: {{ issued_meta.edition }} · Wygasa: {{ issued_meta.expires or 'bezterminowo' }} · Max SKU: {{ issued_meta.max_skus }}</p>
+</section>
+{% endif %}
+{% if error %}<p class="err">{{ error }}</p>{% endif %}
+
+<div class="grid2">
+  <form class="card" method="post" action="/admin/issue">
+    <div class="card-head"><div><h3>Wystaw nowy klucz</h3><p>Token HMAC — firma wkleja go we własnym panelu → Licencja.</p></div></div>
+    <label><span>Klient / firma {{ info("Nazwa zapisana w payloadzie licencji.") }}</span>
+      <input name="customer" required placeholder="Firma ABC Sp. z o.o.">
+    </label>
+    <label><span>E-mail kontaktowy</span>
+      <input type="email" name="email" placeholder="ops@firma.pl">
+    </label>
+    <div class="grid2">
+      <label><span>Edycja {{ info("trial = test, standard/pro = produkcja.") }}</span>
+        <select name="edition">
+          <option value="trial">trial</option>
+          <option value="standard" selected>standard</option>
+          <option value="pro">pro</option>
+        </select>
+      </label>
+      <label><span>Max SKU {{ info("Limit produktów przetwarzanych w jednym raporcie.") }}</span>
+        <input type="number" name="max_skus" value="5000" min="50" step="50">
+      </label>
+    </div>
+    <label><span>Data ważności {{ info("Pusta = bezterminowo. Format YYYY-MM-DD.") }}</span>
+      <input type="date" name="expires">
+    </label>
+    <button class="btn primary" type="submit">Wygeneruj token</button>
+  </form>
+
+  <article class="card">
+    <div class="card-head"><div><h3>Jak to działa</h3><p>Rozdział panelu klienta i vendora.</p></div></div>
+    <ol class="muted" style="padding-left:18px;line-height:1.7">
+      <li>Ty logujesz się tylko na <span class="mono">/admin</span> (hasło z <span class="mono">ADMIN_PASSWORD</span>).</li>
+      <li>Wystawiasz klucz firmie (ważność + limit SKU).</li>
+      <li>Firma dostaje własną instalację / panel — bez linku do admina.</li>
+      <li>Firma aktywuje klucz w zakładce <strong>Licencja</strong>.</li>
+    </ol>
+  </article>
+</div>
+
+<section class="card" style="margin-top:14px">
+  <div class="card-head"><div><h3>Lista wszystkich wystawionych licencji</h3><p>Pełne klucze widoczne tylko tutaj.</p></div></div>
+  {% if history %}
+  <div class="table-wrap">
+    <table>
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Firma</th>
+          <th>E-mail</th>
+          <th>Edycja</th>
+          <th>Wygasa</th>
+          <th>Max SKU</th>
+          <th>Klucz</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for h in history %}
+        <tr>
+          <td class="mono">{{ h.issued_at[:19]|replace('T',' ') }}</td>
+          <td>{{ h.customer }}</td>
+          <td>{{ h.email or '—' }}</td>
+          <td>{{ h.edition }}</td>
+          <td>{{ h.expires or 'bezterminowo' }}</td>
+          <td>{{ h.max_skus }}</td>
+          <td>
+            {% if h.key %}
+            <textarea class="key-cell" rows="2" readonly onclick="this.select()">{{ h.key }}</textarea>
+            {% else %}
+            <span class="mono">{{ h.key_preview }}</span>
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="empty">Brak wystawionych kluczy — wygeneruj pierwszy po lewej.</p>
+  {% endif %}
+</section>
+{% endblock %}

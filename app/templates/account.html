@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero"><div><p class="overline">PROFIL I DOSTĘP</p><h1>Konto</h1><p class="muted">Użytkownik, organizacja i informacje o planie.</p></div></section>
+<div class="grid2">
+  <section class="card">
+    <div class="card-head"><div><h3>Profil użytkownika</h3><p>konto testowe administratora</p></div><span class="avatar">WA</span></div>
+    <label>Imię i nazwisko<input value="Walenty — Administrator" disabled></label>
+    <label>Rola<input value="Właściciel / administrator" disabled></label>
+    <label>Uprawnienia<input value="Raporty, konfiguracja, integracje, licencja" disabled></label>
+    <p class="muted">Logowanie i wielu użytkowników zostaną podłączone przed publicznym wdrożeniem.</p>
+  </section>
+  <section class="card">
+    <div class="card-head"><div><h3>Plan i licencja</h3><p>status bieżącej instalacji</p></div><span class="pill {{ license.mode }}">{{ license.mode }}</span></div>
+    <p>{{ license.reason }}</p>
+    {% if license.payload %}
+    <table><tr><td>Klient</td><td>{{ license.payload.customer }}</td></tr><tr><td>Edycja</td><td>{{ license.payload.edition }}</td></tr><tr><td>Limit SKU</td><td>{{ license.payload.max_skus }}</td></tr><tr><td>Wygasa</td><td>{{ license.payload.expires or 'bezterminowo' }}</td></tr></table>
+    {% endif %}
+    <a class="btn" href="/license">Zarządzaj licencją</a>
+  </section>
+</div>
+<section class="card" style="margin-top:14px">
+  <div class="card-head"><div><h3>Bezpieczeństwo</h3><p>ustawienia wymagane przed wdrożeniem na VPS</p></div></div>
+  <div class="grid3">
+    <div><strong>Logowanie użytkowników</strong><p class="muted">Do wdrożenia</p></div>
+    <div><strong>Szyfrowanie sekretów</strong><p class="muted">Do wdrożenia przed produkcją</p></div>
+    <div><strong>HTTPS i backup</strong><p class="muted">Konfiguracja na VPS</p></div>
+  </div>
+</section>
+{% endblock %}

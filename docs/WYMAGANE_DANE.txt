@@ -1,0 +1,93 @@
+Orders Management — wymagane dane wejściowe (JSON)
+==================================================
+
+Model uproszczony pod Nexo Pro: 3 pliki (łączone po ID towaru).
+
+Wymagane: 1) produkty + 2) sprzedaż.
+Opcjonalne: 3) zamówienia do dostawcy (ZD — „w drodze”).
+
+Rezerwacje NIE wymagają osobnego pliku — eksportuj je w kartotece produktów
+(kolumny: stan, rezerwacja, dostępne).
+
+
+FORMAT
+------
+Każdy plik to:
+  A) lista obiektów:
+     [ { "id": "1001", ... }, ... ]
+
+  albo B) obiekt z listą w jednym z kluczy:
+     { "items": [ ... ] }
+     dozwolone klucze: items / data / records / products / sales / rows
+
+
+1) PRODUKTY (wymagane)
+----------------------
+  id, sku, ean, name/nazwa
+  stan magazynowy + rezerwacja + dostępne (Nexo: IloscDostepna)
+    — jeśli masz „dostępne”, system użyje tego jako wolny stan;
+    — jeśli nie, liczy: max(stan − rezerwacja, 0).
+
+  opcjonalnie: magazyn, producent, grupa, active, eol, min_qty, moq,
+               order_increment, lead_time_days, inbound_qty (suma ZD w eksporcie)
+
+
+2) SPRZEDAŻ (wymagane)
+----------------------
+  id, date/data, qty/ilosc, net_value/wartosc_netto, cost/koszt
+
+
+3) ZAMÓWIENIA DO DOSTAWCY — ZD (opcjonalne)
+-------------------------------------------
+Otwarte pozycje ZD — „w drodze” w formule (inbound_qty).
+
+  id              - ID towaru (Asortyment)
+  qty_open        - pozostało do przyjęcia (PozostalaIlosc)
+  qty             - ilość zamówiona (jeśli brak qty_open)
+  eta             - termin realizacji
+  status          - open / closed / anulowane…
+  document_symbol - numer ZD (opcjonalnie)
+  supplier        - dostawca (opcjonalnie)
+  warehouse       - magazyn docelowy (opcjonalnie)
+
+
+ALGORYTM (skrót)
+----------------
+1. Feature’y z historii (średnia 30/90, trend, sezon, CV/XYZ)
+2. Współczynniki: dostępność (domyślnie 1), spadek popytu, sezon, zmienność
+3. daily_demand_adj = baza × współczynniki
+4. Formuła (edytowalna w panelu), domyślnie:
+
+   daily_demand_adj * (lead_time_days + buffer_days * volatility_factor)
+   - free_stock - inbound_qty + backlog_qty
+
+   free_stock = dostępne (Nexo) LUB stan − rezerwacja
+   inbound_qty  = suma otwartych ZD (plik purchase_orders lub kolumna w produktach)
+
+5. Zaokrąglenie MOQ / Order Increment → tryb auto / weryfikacja / skip
+
+
+MAPOWANIE
+---------
+Nazwy pól ERP mapujesz w: Reguły i dane → Mapowanie
+(listy rozwijane: pole systemowe → kolumna z pliku).
+
+
+PRZYKŁADY (sample_data/)
+------------------------
+products.json — kartoteka ze stan / rezerwacje / dostepne
+sales.json      — historia pozycji sprzedaży
+purchase_orders.json (opcjonalnie):
+[
+  {
+    "id": "1001",
+    "qty": 24,
+    "qty_open": 24,
+    "eta": "2026-08-20",
+    "status": "open",
+    "document_symbol": "ZD 16/MAG/08/2026",
+    "supplier": "GardenPro"
+  }
+]
+
+Szczegółowe mapowanie tabel Nexo → JSON: docs/NEXO_EKSPORT.md

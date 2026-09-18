@@ -7,19 +7,39 @@
   <link rel="stylesheet" href="/static/app.css" />
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <strong>{{ product }}</strong>
-      <span class="ver">v{{ version }}</span>
-    </div>
-    <nav>
-      <a href="/">Dashboard</a>
-      <a href="/settings">Ustawienia</a>
-      <a href="/license">Licencja</a>
+  <aside class="sidebar">
+    <a class="brand" href="/">
+      <span class="brand-mark">OM</span>
+      <span><strong>Orders</strong><small>Management</small></span>
+    </a>
+    <nav class="side-nav">
+      <a class="{% if request.url.path == '/' %}active{% endif %}" href="/"><span>⌂</span> Dashboard</a>
+      <a class="{% if request.url.path == '/reports' %}active{% endif %}" href="/reports"><span>▤</span> Raporty</a>
+      <a class="{% if request.url.path == '/settings' %}active{% endif %}" href="/settings"><span>⚙</span> Reguły i dane</a>
+      <a class="{% if request.url.path == '/integrations' %}active{% endif %}" href="/integrations"><span>⇄</span> Integracje</a>
+      <a class="{% if request.url.path == '/notifications' %}active{% endif %}" href="/notifications"><span>✉</span> Powiadomienia</a>
+      <a class="{% if request.url.path == '/logs' %}active{% endif %}" href="/logs"><span>☰</span> Logi</a>
+      <a class="{% if request.url.path == '/docs' %}active{% endif %}" href="/docs"><span>?</span> Dokumentacja</a>
     </nav>
-  </header>
-  <main class="wrap">
-    {% block content %}{% endblock %}
-  </main>
+    <div class="side-bottom">
+      <a class="{% if request.url.path == '/license' %}active{% endif %}" href="/license"><span>◇</span> Licencja</a>
+      <a class="{% if request.url.path == '/account' %}active{% endif %}" href="/account"><span>●</span> Konto</a>
+      <div class="version">Wersja {{ version }}</div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <span class="environment">ŚRODOWISKO TESTOWE</span>
+      </div>
+      <div class="top-actions">
+        <span class="status-dot"></span><span>System działa</span>
+        <a class="avatar" href="/account">WA</a>
+      </div>
+    </header>
+    <main class="wrap">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
 </body>
 </html>

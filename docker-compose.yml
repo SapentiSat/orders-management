@@ -9,7 +9,9 @@ services:
     environment:
       APP_ENV: production
       DATA_DIR: /app/data
-      SAMPLE_MODE: "true"
+      SAMPLE_MODE: "false"
+      HOST: "0.0.0.0"
+      PORT: "8000"
     volumes:
       - om_data:/app/data
     restart: unless-stopped

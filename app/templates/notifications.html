@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% from "macros.html" import info %}
+{% block content %}
+<section class="hero"><div><p class="overline">KOMUNIKACJA</p><h1>Powiadomienia</h1><p class="muted">Odbiorcy oraz treść raportów i alertów. Połączenie SMTP konfigurujesz w Integracjach.</p></div></section>
+{% if saved %}<p class="ok">Ustawienia powiadomień zostały zapisane.</p>{% endif %}
+<div class="settings-tabs">
+  <a href="#weekly" data-notification-tab="weekly">Raport cotygodniowy</a>
+  <a href="#alerts" data-notification-tab="alerts">Alerty błędów</a>
+</div>
+<form method="post" action="/notifications/save">
+  <section class="card notification-panel" data-notification-panel="weekly" id="weekly">
+    <div class="card-head"><div><h3>Raport cotygodniowy</h3><p>Wiadomość z podsumowaniem i załącznikiem Excel.</p></div><span class="pill">RAPORT</span></div>
+    <div class="composer-meta">
+      <label><span>Adres nadawcy {{ info("Adres widoczny w polu Od. Musi być dozwolony przez skonfigurowane konto SMTP.") }}</span><input type="email" name="from_addr" value="{{ cfg.mail.from_addr }}" placeholder="raport@firma.pl"></label>
+      <label><span>Odbiorcy {{ info("Wiele adresów oddziel przecinkami. Te osoby otrzymają regularny raport.") }}</span><input name="report_recipients" value="{{ cfg.mail.report_recipients|join(', ') }}" placeholder="zakupy@firma.pl, jacek@firma.pl"></label>
+      <label><span>Szablon wiadomości {{ info("Określa wygląd gotowego maila. Twoja treść zostanie umieszczona na jego początku.") }}</span><select name="report_template" id="report-template"><option value="professional" {% if cfg.mail.report_template == 'professional' %}selected{% endif %}>Profesjonalny</option><option value="minimal" {% if cfg.mail.report_template == 'minimal' %}selected{% endif %}>Minimalny</option><option value="dark" {% if cfg.mail.report_template == 'dark' %}selected{% endif %}>Ciemny nagłówek</option></select></label>
+    </div>
+    <label><span>Temat wiadomości {{ info("Możesz użyć znacznika {date}, który zostanie zastąpiony datą raportu.") }}</span><input name="report_subject" value="{{ cfg.mail.report_subject }}"></label>
+    <div class="email-composer">
+      <div class="editor-column">
+        <div class="field-title">Treść wprowadzająca {{ info("Ta treść pojawi się na początku wiadomości, przed automatycznym raportem i załącznikiem Excel.") }}</div>
+        <div class="editor-toolbar" role="toolbar" aria-label="Formatowanie tekstu">
+          <button type="button" data-command="bold" title="Pogrubienie"><b>B</b></button>
+          <button type="button" data-command="italic" title="Kursywa"><i>I</i></button>
+          <button type="button" data-command="underline" title="Podkreślenie"><u>U</u></button>
+          <span></span>
+          <button type="button" data-command="insertUnorderedList" title="Lista punktowana">• Lista</button>
+          <button type="button" data-command="insertOrderedList" title="Lista numerowana">1. Lista</button>
+          <button type="button" id="add-link" title="Wstaw link">🔗 Link</button>
+        </div>
+        <div class="html-editor" id="report-body-editor" contenteditable="true">{{ cfg.mail.report_body|safe }}</div>
+        <textarea name="report_body" id="report-body-value" hidden>{{ cfg.mail.report_body }}</textarea>
+        <div class="variables">
+          <span>Zmienne:</span>
+          <button type="button" data-variable="{date}">{date}</button>
+          <button type="button" data-variable="{report_link}">{report_link}</button>
+          <button type="button" data-variable="{company}">{company}</button>
+        </div>
+      </div>
+      <div class="preview-column">
+        <div class="field-title"><span>Podgląd wiadomości</span><small>aktualizowany na żywo</small></div>
+        <div class="email-preview-wrap">
+          <div class="email-preview professional" id="email-preview">
+            <div class="preview-header"><span class="preview-logo">OM</span><div><strong>Orders Management</strong><small>Cotygodniowy raport</small></div></div>
+            <div class="preview-body">
+              <div id="preview-intro"></div>
+              <div class="preview-kpis"><div><strong>124 850 zł</strong><span>wartość sugestii</span></div><div><strong>18</strong><span>auto-ready</span></div><div><strong>7</strong><span>do weryfikacji</span></div></div>
+              <a class="preview-cta">Excel w załączniku</a>
+              <p class="preview-foot">Raport wygenerowany automatycznie przez Orders Management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card notification-panel" data-notification-panel="alerts" id="alerts">
+    <div class="card-head"><div><h3>Alerty błędów</h3><p>Osobna wiadomość, gdy proces pobierania lub raportowania nie działa.</p></div><span class="pill">ERROR</span></div>
+    <label><span>Odbiorcy techniczni {{ info("Osoby odpowiedzialne za reakcję na błędy łącznika Nexo, mapowania, Excela lub wysyłki.") }}</span><input name="alert_recipients" value="{{ cfg.mail.alert_recipients|join(', ') }}" placeholder="it@firma.pl"></label>
+    <label><span>Temat alertu {{ info("Temat pilnej wiadomości wysyłanej po wykryciu błędu procesu.") }}</span><input name="alert_subject" value="{{ cfg.mail.alert_subject }}"></label>
+    <label><span>Treść alertu {{ info("System automatycznie doda nazwę błędu, czas wystąpienia oraz odnośnik do logów.") }}</span><textarea name="alert_body" rows="7">{{ cfg.mail.alert_body }}</textarea></label>
+  </section>
+  <div style="margin-top:16px"><button class="btn primary" type="submit">Zapisz powiadomienia</button></div>
+</form>
+<script>
+  (() => {
+    const tabs = [...document.querySelectorAll("[data-notification-tab]")];
+    const panels = [...document.querySelectorAll("[data-notification-panel]")];
+    function select(name) {
+      const selected = panels.some(p => p.dataset.notificationPanel === name) ? name : "weekly";
+      panels.forEach(p => p.classList.toggle("active", p.dataset.notificationPanel === selected));
+      tabs.forEach(t => t.classList.toggle("active", t.dataset.notificationTab === selected));
+      history.replaceState(null, "", "#" + selected);
+    }
+    tabs.forEach(t => t.addEventListener("click", e => { e.preventDefault(); select(t.dataset.notificationTab); }));
+    select(location.hash.slice(1) || "weekly");
+
+    const editor = document.getElementById("report-body-editor");
+    const value = document.getElementById("report-body-value");
+    const intro = document.getElementById("preview-intro");
+    const preview = document.getElementById("email-preview");
+    const template = document.getElementById("report-template");
+
+    function cleanPreview(html) {
+      const doc = new DOMParser().parseFromString(html, "text/html");
+      doc.querySelectorAll("script,style,iframe,object").forEach(node => node.remove());
+      doc.querySelectorAll("*").forEach(node => [...node.attributes].forEach(attr => {
+        if (attr.name.startsWith("on")) node.removeAttribute(attr.name);
+      }));
+      return doc.body.innerHTML;
+    }
+    function refreshPreview() {
+      value.value = editor.innerHTML;
+      intro.innerHTML = cleanPreview(editor.innerHTML);
+      preview.className = "email-preview " + template.value;
+    }
+    document.querySelectorAll("[data-command]").forEach(button => button.addEventListener("click", () => {
+      editor.focus();
+      document.execCommand(button.dataset.command, false);
+      refreshPreview();
+    }));
+    document.getElementById("add-link").addEventListener("click", () => {
+      const url = prompt("Podaj adres linku (https://...)");
+      if (url) { editor.focus(); document.execCommand("createLink", false, url); refreshPreview(); }
+    });
+    document.querySelectorAll("[data-variable]").forEach(button => button.addEventListener("click", () => {
+      editor.focus();
+      document.execCommand("insertText", false, button.dataset.variable);
+      refreshPreview();
+    }));
+    editor.addEventListener("input", refreshPreview);
+    template.addEventListener("change", refreshPreview);
+    editor.closest("form").addEventListener("submit", refreshPreview);
+    refreshPreview();
+  })();
+</script>
+{% endblock %}

@@ -12,9 +12,12 @@ class Settings(BaseSettings):
     app_env: str = "development"
     secret_key: str = "change-me-in-production"
     license_signing_secret: str = "om-dev-signing-secret-change-in-prod"
+    admin_password: str = "admin-dev-change-me"
     license_key: str = ""
     data_dir: Path = Path("data")
     sample_mode: bool = True
+    # 0 = bez limitu SKU (lokalnie / testy). >0 wymusza limit niezależnie od licencji.
+    sku_limit: int = 0
     host: str = "0.0.0.0"
     port: int = 8000
 

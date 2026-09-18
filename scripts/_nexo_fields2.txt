@@ -1,0 +1,262 @@
+﻿=== Dokumenty ===
+  DataDlaIntrastatu                          | Data uj´┐Żcia dokumentu w deklaracji INTRASTAT. 
+  DataSprzedazy                              | Data rezerwacji. Data, na kt´┐Żr´┐Ż powstan´┐Ż rezerwacje asortymentu w magazynie.
+  DataWprowadzenia                           | Data wprowadzenia dokumentu do systemu. Dla dokument´┐Żw wystawianych przez u´┐Żytkownika jest
+  DataWydaniaWystawienia                     | Data orygina´┐Żu dokumentu odbieranego z zewn´┐Żtrz (np. faktura zakupu lub przyj´┐Żcie zewn´┐Żtrz
+  DataWystawieniaNadanaPrzezKSEF             | Data wystawienia nadana przez KSeF. 
+  Dokument_AkcjaAutomatycznaUmowyKlienckiej_Id | Akcja automatyczna, za po´┐Żrednictwem kt´┐Żrej zosta´┐Ż wygenerowany dokument. Identyfikator w 
+  Dokument_DokumentPowiazany_Id              | Identyfikator dokumentu powi´┐Żzanego. 
+  Dokument_FlagaWlasna_Id                    | Flaga w´┐Żasna. Identyfikator w tabeli FlagiWlasne. 
+  Dokument_FlagHeader_Id                     | Nag´┐Ż´┐Żwek flagi w´┐Żasnej. Identyfikator w tabeli FlagHeaders. 
+  Dokument_KursWalutyCennika_Id              | Kurs waluty dokumentu na potrzeby cennika. Identyfikator w tabeli KursyWalutyDokumentu. U´┐Ż
+  Dokument_KursWalutyDokumentu_Id            | Kurs waluty dokumentu. Identyfikator w tabeli KursyWalutyDokumentu. U´┐Żyty do wyliczenia wa
+  Dokument_KursWalutyVat_Id                  | Kurs waluty dokumentu dla VAT. Identyfikator w tabeli KursyWalutyDokumentu. U´┐Żyty do wylic
+  Dokument_Naglowek_Id                       | Nag´┐Ż´┐Żwek encji. Identyfikator w tabeli NaglowkiEncji. 
+  Dokument_OdbiorSprzedazy_Id                | Identyfikator odbioru sprzeda´┐Ży dokumentu. 
+  Dokument_Platnik_Id                        | Podmiot b´┐Żd´┐Żcy p´┐Żatnikiem dla dokumentu. Identyfikator w tabeli PodmiotHistorie. 
+  Dokument_SerwisowaneUrzadzenieZrodlowe_Id  | Serwisowane urz´┐Żdzenie, na podstawie kt´┐Żrego utworzony zosta´┐Ż dokument. Identyfikator w ta
+  Dokument_Waluta_Id                         | Waluta dokumentu. Identyfikator w tabeli Waluty. 
+  Dokument_ZlecenieSerwisoweDokumentuZakupu_Id | Powi´┐Żzanie dokumentu ze zleceniem jako dokument zakupu. Identyfikator w tabeli ZleceniaSer
+  Dokument_ZlecenieSerwisoweZamowieniaOdKlienta_Id | Powi´┐Żzanie Zlecenia serwisowego z wystawionymi z niego dokumentami Zam´┐Żwienia Od Klienta, 
+  DokumentCRM_SzablonDzialania_Id            | Powi´┐Żzany szablon dzia´┐Żania. Identyfikator w tabeli Szablony_SzablonDzialania. 
+  DokumentCRM_SzablonZleceniaSerwisowego_Id  | Powi´┐Żzany szablon zlecenia serwisowego. Identyfikator w tabeli Szablony_SzablonZleceniaSer
+  DokumentDS_DokumentPochodny_Id             | Identyfikator dokumentu, kt´┐Żry powsta´┐Ż na podstawie tego dokumentu. 
+  DokumentDS_RodzajProceduryMarzyId          | Identyfikator rodzaju procedury mar´┐Ży zastosowany na dokumencie. Warto´┐Ż´┐Ż nadawana automaty
+  DokumentDS_UrzadzenieZewnetrzne_Id         | Identyfikator urz´┐Żdzenia zewn´┐Żtrznego, z kt´┐Żrego pochodzi ten dokument. 
+  DokumentFW_DokumentDoKsiegowaniaVatuNaleznego_Nr | Dokument do dekretacji wygenerowany przez dany dokument, je´┐Żli dotyczy on podatku nale´┐Żneg
+  DokumentFW_DokumentDoKsiegowaniaVatuNaliczonego_Nr | Dokument do dekretacji wygenerowany przez dany dokument, je´┐Żli dotyczy on podatku naliczon
+  DokumentFW_OpisKsiegowyDlaVatuNaleznego_Id | Opis ksi´┐Żgowy danego dokumentu, je´┐Żli dotyczy on podatku nale´┐Żnego. Identyfikator w tabeli
+  DokumentFW_OpisKsiegowyDlaVatuNaliczonego_Id | Opis ksi´┐Żgowy danego dokumentu, je´┐Żli dotyczy on podatku naliczonego. Identyfikator w tabe
+  DokumentHandlowy_AwariaKSeFId              | Identyfikator awarii Krajowego Systemu e-Faktur, w ramach kt´┐Żrej zosta´┐Ż wystawiony dokumen
+  DokumentHandlowy_DataMagazynowa            | Data wystawienia automatycznego dokumentu magazynowego. Dla dokument´┐Żw sprzeda´┐Ży b´┐Żdzie to
+  DokumentHandlowy_MetodaKasowa              | Czy dla rozliczenia dokumentu stosowana jest metoda kasowa. 
+  DokumentHandlowy_MetodaKasowaPIT           | Znacznik okre´┐Żlaj´┐Żcy czy dla rozliczenia dokumentu w PIT stosowana jest metoda kasowa. 
+  DokumentHandlowy_OdpisNaFunduszePromocji   | Czy nalicza´┐Ż odpis na fundusz promocji. 
+  DokumentHandlowy_PodtypRozrachunkuNaMinusId | Identyfikator podtypu rozrachunku na minus. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentHandlowy_PodtypRozrachunkuNaPlusId | Identyfikator podtypu rozrachunku na plus. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentHandlowy_PomniejszonaKwotaDoZaplaty | Kwota do zap´┐Żaty pomniejszona o odpisy na fundusze promocji. 
+  DokumentHandlowy_TerminPrzeslaniaDoKsef    | Termin przes´┐Żania dokumentu do KSeF. 
+  DokumentHandlowy_TerytorialnaJednostkaNadrzedna_Id | Nadrz´┐Żdna jednostka terytorialna, b´┐Żd´┐Żca p´┐Żatnikiem. Identyfikator w tabeli Podmioty. 
+  DokumentHandlowy_TworzAutomatyczneDokumenty | Czy do dokumentu sprzeda´┐Ży powinny powsta´┐Ż automatyczne dokumenty magazynowe. 
+  DokumentHandlowy_WystawionyNaFirme         | Okre´┐Żla, czy dokument zosta´┐Ż wystawiony na kontrahenta b´┐Żd´┐Żcego czynnym podatnikiem VAT. 
+  DokumentHandlowy_ZastepujeInnyDokumentHandlowy | Czy ten dokument zast´┐Żpuje inny dokument handlowy. np. FDet zast´┐Żpuje dokumenty PA.
+  DokumentKDS_Paragon_Id                     | Identyfikator paragonu, do kt´┐Żrego wystawiony zosta´┐Ż zwrot. 
+  DokumentKDS_PoprzedniaKorekta_Id           | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentKDS_RodzajProceduryMarzyId         | Identyfikator rodzaju procedury mar´┐Ży zastosowanej na dokumencie. Warto´┐Ż´┐Ż nadawana automat
+  DokumentKDS_UrzadzenieZewnetrzne_Id        | Identyfikator urz´┐Żdzenia zewn´┐Żtrznego, z kt´┐Żrego pochodzi dokument. 
+  DokumentKDZ_NastepnaKorekta_Id             | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentKFW_DokumentDoKsiegowaniaVatuNaleznego_Nr | Dokument do dekretacji wygenerowany przez dany dokument, je´┐Żli dotyczy on podatku nale´┐Żneg
+  DokumentKFW_DokumentDoKsiegowaniaVatuNaliczonego_Nr | Dokument do dekretacji wygenerowany przez dany dokument, je´┐Żli dotyczy on podatku naliczon
+  DokumentKFW_NastepnaKorekta_Id             | Identyfikator nast´┐Żpnej korekty w ´┐Ża´┐Żcuchu korekt. 
+  DokumentKFW_OpisKsiegowyDlaVatuNaleznego_Id | Opis ksi´┐Żgowy danego dokumentu, je´┐Żli dotyczy on podatku nale´┐Żnego. Identyfikator w tabeli
+  DokumentKFW_OpisKsiegowyDlaVatuNaliczonego_Id | Opis ksi´┐Żgowy danego dokumentu, je´┐Żli dotyczy on podatku naliczonego. Identyfikator w tabe
+  DokumentKorygowanyId                       | Identyfikator korygowanego dokumentu. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentKPW_NastepnaKorekta_Id             | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentKPZ_NastepnaKorekta_Id             | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentKRW_DokumentDlaKtoregoPrzychoduje_Id | Je´┐Żli dokument powsta´┐Ż do dokumentu produkcyjnego, wskazanie na ten dokument. Identyfikato
+  DokumentKRW_NastepnaKorekta_Id             | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentKWZ_NastepnaKorekta_Id             | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentLogistyczny_ZrealizowanyBezDokumentu | Czy dokument zosta´┐Ż zrealizowany bez dokumentu realizuj´┐Żcego. 
+  DokumentMagazynowy_DokumentDoKsiegowania_Nr | Dokument do dekretacji wygenerowany przez dany dokument. Identyfikator w tabeli DokumentyD
+  DokumentMagazynowy_DokumentZrodlowyId      | Identyfikator dokumentu ´┐Żr´┐Żd´┐Żowego. 
+  DokumentMagazynowy_DoZaliczkowego          | Czy dokument powsta´┐Ż do dokumentu zaliczkowego. 
+  DokumentMagazynowy_InwentaryzacjaId        | Identyfikator inwentaryzacji powi´┐Żzanej z dokumentem magazynowym. 
+  DokumentMagazynowy_KwotaNiezafakturowana   | Kwota niezafakturowana. Ca´┐Żkowita warto´┐Ż´┐Ż z tego dokumentu, jaka nie zosta´┐Ża jeszcze uj´┐Żta
+  DokumentMagazynowy_OpisKsiegowy_Id         | Opis ksi´┐Żgowy danego dokumentu. Identyfikator w tabeli OpisyKsiegoweElementowDokumentow. 
+  DokumentMagazynowy_PozycjaWydaniaKaucji_Id | Informacja o warto´┐Żci kaucji wydanych do dokumentu zaliczkowego. Identyfikator w tabeli Po
+  DokumentMagazynowy_ProdukcyjnyDlaKtoregoRozchoduje_Id | Dokument produkcyjny, dla kt´┐Żrego ten dokument jest dokumentem rozchoduj´┐Żcym. Identyfikato
+  DokumentMMP_DokumentMMW_Id                 | Wydanie mi´┐Żdzymagazynowe, do kt´┐Żrego powsta´┐Żo to przyj´┐Żcie. Identyfikator w tabeli Dokumen
+  DokumentMMW_MagazynDocelowyId              | Identyfikator magazynu docelowego dla przesuni´┐Żcia. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentMMW_OddzialDocelowyId              | Identyfikator oddzia´┐Żu docelowego dla magazynu. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentOE_CzyWpisanaGodzinaObowiazujeDo   | Okre´┐Żla, czy zosta´┐Ża wpisana godzina w dacie ko´┐Żca obowi´┐Żzywania oferty. 
+  DokumentOE_CzyWpisanaGodzinaObowiazujeOd   | Okre´┐Żla, czy zosta´┐Ża wpisana godzina w dacie pocz´┐Żtku obowi´┐Żzywania oferty. 
+  DokumentOE_DataOstatniejZmianyStatusu      | Data ustawienia obecnego statusu. 
+  DokumentOE_DataZaakceptowania              | Data ustawienia statusu Zaakceptowana. 
+  DokumentOE_DniDoRealizacji                 | Liczba dni, s´┐Żu´┐Ż´┐Żca do obliczenia terminu realizacji. 
+  DokumentOE_DniDoRealizacjiOdDatyAkceptacji | Liczba dni, s´┐Żu´┐Ż´┐Żca do obliczenia terminu realizacji na podstawie daty ustawienia statusu 
+  DokumentOE_DniDoRealizacjiOdDatyZamowienia | Liczba dni, s´┐Żu´┐Ż´┐Żca do obliczenia terminu realizacji na podstawie daty zam´┐Żwienia. 
+  DokumentOE_KonfiguracjaDokumentFinalny_Id  | Konfiguracja dokumentu sprzeda´┐Ży, w kt´┐Żry realizowana ma zosta´┐Ż oferta. Identyfikator w ta
+  DokumentOE_KonfiguracjaWydanie_Id          | Konfiguracja dokumentu typu wydanie, w kt´┐Żry realizowana ma zosta´┐Ż oferta. Identyfikator w
+  DokumentOE_KonfiguracjaZaliczka_Id         | Konfiguracja dokumentu typu zaliczka, w kt´┐Żry realizowana ma zosta´┐Ż oferta. Identyfikator 
+  DokumentOE_KonfiguracjaZamowienie_Id       | Konfiguracja dokumentu typu zam´┐Żwienie, w kt´┐Żry realizowana ma zosta´┐Ż oferta. Identyfikato
+  DokumentOE_ObowiazujeDo                    | Data ko´┐Żca obowi´┐Żzywania oferty. 
+  DokumentOE_ObowiazujeOd                    | Data pocz´┐Żtku obowi´┐Żzywania oferty. 
+  DokumentOE_OdCzegoLiczonyTerminRealizacji  | Decyduje o tym, od czego b´┐Żdzie liczony termin realizacji: czy b´┐Żdzie wybierany z kontrolk
+  DokumentOE_OfertaHandlowa                  | Okre´┐Żla, czy oferta jest ofert´┐Ż w. 
+  DokumentOE_OkreslajIlosc                   | Zarezerwowane. Aktualnie niewykorzystywane.
+  DokumentOE_Opiekun_Id                      | U´┐Żytkownik, b´┐Żd´┐Żcy opiekunem oferty. Identyfikator w tabeli Uzytkownicy. 
+  DokumentOE_Opis_Id                         | Szczeg´┐Żowy opis oferty. Identyfikator w tabeli KonteneryPolTekstowych. 
+  DokumentOE_OpisKoncowy_Id                  | Ko´┐Żcowy opis oferty. Identyfikator w tabeli KonteneryPolTekstowych. 
+  DokumentOE_OpisKoncowyKrotki               | Tekstowy opis ko´┐Żcowy oferty. 
+  DokumentOE_OpisKrotki                      | Tekstowy opis oferty. 
+  DokumentOE_ProcesOfertowy_Id               | Proces ofertowy, zgodnie z kt´┐Żrym wykonywane s´┐Ż prace zwi´┐Żzane z ofert´┐Ż. Wype´┐Żnione tak´┐Że 
+  DokumentOE_ProcesOfertowyDlaKtoregoAktualna_Id | Proces ofertowy, zgodnie z kt´┐Żrym wykonywane s´┐Ż prace zwi´┐Żzane z ofert´┐Ż i oferta jest ofer
+  DokumentOE_PrzedstawicielId                | Id przedstawiciela powi´┐Żzanego z ofert´┐Ż. Klucz obcy.
+  DokumentOE_PrzeniesionyZInnegoSystemu      | Pole okre´┐Żla, czy proces ofertowy zosta´┐Ż przeniesiony z innego systemu, np. z Gestora GT. 
+  DokumentOE_PrzenosUwagi                    | Okre´┐Żla, czy przenosi´┐Ż uwagi na dokument ko´┐Żcowy. 
+  DokumentOE_TerminRealizacjiTylkoDniRobocze | Parametr okre´┐Żlaj´┐Żcy czy termin realizacji liczony jest w dniach roboczych (false oznacza 
+  DokumentOE_WprowadzonoPelnyOpis            | Pole informuj´┐Żce, czy wprowadzono szczeg´┐Żowy opis oferty. Uzupe´┐Żniane automatycznie.
+  DokumentOE_WprowadzonoPelnyOpisKoncowy     | Pole informuj´┐Żce, czy wprowadzono ko´┐Żcowy opis oferty. Uzupe´┐Żniane automatycznie.
+  DokumentOE_WzorzecInformacjiKoncowych_Id   | Wzorzec informacji ko´┐Żcowych. Identyfikator w tabeli TresciWydrukuRTF. 
+  DokumentOE_WzorzecInformacjiPoczatkowych_Id | Wzorzec informacji pocz´┐Żtkowych. Identyfikator w tabeli TresciWydrukuRTF. 
+  DokumentOE_Zaakceptowany                   | Okre´┐Żla, czy oferta zosta´┐Ża zaakceptowana przez klienta. 
+  DokumentProdukcyjny_DataPrzychodu          | Data wystawienia dokumentu przychoduj´┐Żcego. Data przyj´┐Żcia kompletu (dla monta´┐Żu) lub sk´┐Ża
+  DokumentProdukcyjny_DataRozchodu           | Data wystawienia dokumentu rozchoduj´┐Żcego. Data wydania sk´┐Żadnik´┐Żw (dla monta´┐Żu) lub kompl
+  DokumentProdukcyjny_MagazynSkladnikowId    | Identyfikator magazynu sk´┐Żadnik´┐Żw. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentProdukcyjny_PoziomCenSkladnikowId  | Identyfikator poziomu cen dla sk´┐Żadnik´┐Żw. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentProdukcyjny_PoziomCenUslugId       | Identyfikator poziomu cen dla us´┐Żug. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentPW_DokumentDlaKtoregoPrzychoduje_Id | Je´┐Żli dokument powsta´┐Ż do dokumentu produkcyjnego, wskazanie na ten dokument. Identyfikato
+  DokumentWZ_OdbiorSprzedazyBraki_Id         | Powi´┐Żzany odbi´┐Żr sprzeda´┐Ży, dla kt´┐Żrego dokument wykazuje braki magazynowe.. Identyfikator
+  DokumentZD_DokumentRoznicowy_Id            | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentZK_DokumentRoznicowy_Id            | Identyfikator. Warto´┐Ż´┐Ż nadawana automatycznie.
+  DokumentZK_KonfiguracjaRealizujacego_Id    | Identyfikator konfiguracji dokumentu, kt´┐Żry domy´┐Żlnie realizuje to ZK. 
+  DokumentZK_ObslugujeMechanizmPodzielonejPlatnosci | Parametr okre´┐Żlaj´┐Żcy czy dokument obs´┐Żuguje mechanizm podzielonej p´┐Żatno´┐Żci. 
+  DokumentZPM_WyliczCeneKompletuZeSkladnikow | Parametr okre´┐Żlaj´┐Żcy czy cena kompletu ma by´┐Ż wyliczana jako suma cen sk´┐Żadnik´┐Żw. 
+  KategoriaDokumentuId                       | Identyfikator kategorii dokumentu. Warto´┐Ż´┐Ż nadawana automatycznie.
+  KlasaDokumentu                             | Nazwa klasy dokumentu. Warto´┐Ż´┐Ż wyliczana po stronie bazy danych, nie mo´┐Żna jej zmieni´┐Ż.
+  KonfiguracjaId                             | Identyfikator konfiguracji. Warto´┐Ż´┐Ż w tym polu zawsze jest identyfikatorem konfiguracji wb
+  KonfiguracjaRzeczywistaId                  | Identyfikator rzeczywistej konfiguracji dokumentu. Warto´┐Ż´┐Ż w tym polu jest identyfikatorem
+  KorektaKosztuMagazynowegoDoUjecia          | Sumaryczna korekta kosztu magazynowego materia´┐Ż´┐Żw i gratis´┐Żw. 
+  KorektaKosztuMagazynowegoOpakowanPrzyjetych | Korekta kosztu magazynowego opakowa´┐Ż przyj´┐Żtych (na minus). 
+  KorektaKosztuMagazynowegoOpakowanWydanych  | Korekta kosztu magazynowego opakowa´┐Ż wydanych. 
+  KorektaKosztuMagazynowegoTowarowPrzyjetych | Sumaryczna korekta kosztu magazynowego towar´┐Żw przyj´┐Żtych. 
+  KorektaKosztuMagazynowegoTowarowWydanych   | Sumaryczna korekta kosztu magazynowego towar´┐Żw wydanych. 
+  KorektaKosztuMagazynowegoUslug             | Sumaryczna korekta kosztu magazynowego us´┐Żug. 
+  KosztMagazynowyDoUjecia                    | Sumaryczny koszt magazynowy materia´┐Ż´┐Żw i gratis´┐Żw na dokumencie. 
+  KosztMagazynowyOpakowanPrzyjetych          | Koszt magazynowy opakowa´┐Ż przyj´┐Żtych (na minus). 
+  KosztMagazynowyOpakowanWydanych            | Koszt magazynowy opakowa´┐Ż wydanych (na plus). 
+  KosztMagazynowyTowarowPrzyjetych           | Sumaryczny koszt magazynowy towar´┐Żw przyj´┐Żtych. 
+  KosztMagazynowyTowarowWydanych             | Sumaryczny koszt magazynowy towar´┐Żw wydanych. 
+  KosztMagazynowyUslug                       | Sumaryczny koszt magazynowy us´┐Żug. 
+  MagazynId                                  | Identyfikator magazynu. Warto´┐Ż´┐Ż nadawana automatycznie.
+  NumeryDokumentowRealizowanych              | Okre´┐Żla jakie dokumenty s´┐Ż realizowane przez ten dokument. 
+  NumeryZewnetrzneDokumentowRealizowanych    | Numery oryginalne dokument´┐Żw realizowanych przez ten dokument. 
+  PowiazanaPozycjaDokumentuId                | Identyfikator pozycji dokumentu, dla kt´┐Żrej dokument zwi´┐Żksza koszt. 
+  ReczniePowiazanyDokumentElektronicznyId    | Identyfikator r´┐Żcznie powi´┐Żzanej e-Faktury. 
+  StatusDokumentuId                          | Identyfikator statusu dokumentu. Warto´┐Ż´┐Ż nadawana automatycznie.
+  Symbol                                     | Symbol dokumentu. Symbol pobrany z wbudowanej konfiguracji dokumentu. Je´┐Żli dokument zosta
+  SymbolRzeczywisty                          | Rzeczywisty symbol dokumentu. Symbol pobrany z rzeczywistej konfiguracji dokumentu.
+  ZawieraAsortymentPodlegajacyMarzy          | Znacznik okre´┐Żlaj´┐Żcy czy dokument zawiera asortyment podlegaj´┐Żcy mar´┐Ży. 
+  ZbiorczeNaliczenieDokumentowId             | Identyfikator powi´┐Żzanego zbiorczego naliczenia dokument´┐Żw. 
+  ZdarzenieDokumentoweId                     | Identyfikator zdarzenia dokumentowego. Warto´┐Ż´┐Ż nadawana automatycznie.
+
+=== PozycjeDokumentu ===
+  AsortymentAktualnyId                       | Identyfikator asortymentu na pozycji. Warto´┐Ż´┐Ż nadawana automatycznie.
+  AsortymentWybranyId                        | Identyfikator historycznego wpisu asortymentu na pozycji. Warto´┐Ż´┐Ż nadawana automatycznie.
+  Dokument_Id                                | Dokument, do kt´┐Żrego nale´┐Ży ta pozycja. Identyfikator w tabeli Dokumenty. 
+  DokumentKKDId                              | Identyfikator korekty koszt´┐Żw zwi´┐Żzanej z pozycj´┐Ż. Warto´┐Ż´┐Ż nadawana automatycznie.
+  GrupyAsortymentuJpkVatUstawioneRecznie     | Znacznik okre´┐Żlaj´┐Żcy czy grupy JPK zosta´┐Ży ustawione r´┐Żcznie przez u´┐Żytkownika czy przepis
+  Ilosc                                      | Ilo´┐Ż´┐Ż wprowadzona na pozycji dokumentu w jednostce pozycji. 
+  IloscWJednostceBazowej                     | Ilo´┐Ż´┐Ż z pozycji przeliczona na jednostk´┐Ż magazynow´┐Ż. 
+  JednostkowyKosztMagazynowy                 | Koszt magazynowy przeliczony na jednostk´┐Ż pozycji. 
+  KorektaKosztowDodatkowychPowiazanychDokumentow | Korekta kosztu magazynowego dokument´┐Żw powi´┐Żzanych z dan´┐Ż pozycj´┐Ż. 
+  KorektaKosztuMagazynowego                  | Korekta kosztu magazynowego pozycji. 
+  KosztMagazynowy                            | Ca´┐Żkowity koszt magazynowy pozycji. Wyliczany w momencie wystawiania dokumentu.
+  KosztyDodatkowePowiazanychDokumentow       | Koszt magazynowy dokument´┐Żw powi´┐Żzanych z dan´┐Ż pozycj´┐Ż. 
+  MagazynId                                  | Identyfikator magazynu. Warto´┐Ż´┐Ż nadawana automatycznie.
+  PrognozowanyJednostkowyKosztMagazynowy     | Prognozowany jednostkowy magazynowy. 
+  PrzeniesionoNaDokument                     | Flaga okre´┐Żlaj´┐Żca czy pozycja zosta´┐Ża przeniesiona na dokument. Flaga okre´┐Żlaj´┐Żca czy pozy
+  PrzenosNaDokument                          | Flaga okre´┐Żlaj´┐Żca czy pozycja ma by´┐Ż przenoszona na dokument. Flaga okre´┐Żlaj´┐Żca czy pozycj
+  RezerwacjaIlosciowa                        | Czy na pozycji wyst´┐Żpuje rezerwacja ilo´┐Żciowa. 
+  RodzajAsortymentuId                        | Identyfikator rodzaju asortymentu. Warto´┐Ż´┐Ż nadawana automatycznie.
+
+NOT FOUND: KonfiguracjeDokumentow
+=== Magazyny ===
+  MagazynGlowny                              | Warto´┐Ż´┐Ż logiczna okre´┐Żlaj´┐Żca, czy magazyn jest magazynem g´┐Ż´┐Żwnym. Do u´┐Życia w przysz´┐Żo´┐Żci.
+  MagazynProdukcji                           | Warto´┐Ż´┐Ż logiczna okre´┐Żlaj´┐Żca, czy magazyn jest magazynem produkcji. 
+  MagazynPrzyjec                             | Warto´┐Ż´┐Ż logiczna okre´┐Żlaj´┐Żca, czy magazyn jest magazynem przyj´┐Ż´┐Ż. 
+  MagazynWydan                               | Warto´┐Ż´┐Ż logiczna okre´┐Żlaj´┐Żca, czy magazyn jest magazynem wyda´┐Ż. 
+  Symbol                                     | Symbol magazynu. Unikalny tekst, kt´┐Żry musi zawiera´┐Ż od 1 do 32 znak´┐Żw.
+
+=== Konfiguracje (wybrane) ===
+
+=== KlasaDokumentu ÔÇö wzorce w SDK ===
+  DokumentPWDokumentKPW
+  DokumentPWInwentaryzacja
+  DokumentPW_DokumentDlaKtoregoPrzychoduje_Id
+  DokumentPZ
+  DokumentPZDokumentHandlowy
+  DokumentPZDokumentKPZ
+  DokumentPapierowy
+  DokumentPlatnoscDokumentu
+  DokumentPoZapisie
+  DokumentPochodny_Id
+  DokumentPotwierdzeniaOdZUSSkompresowaneDaneTekstowe
+  DokumentPowiazanieDokumentuZDokumentemElektronicznym
+  DokumentPowiazanyAutomatycznieId
+  DokumentPowiazanyId
+  DokumentPowiazany_Id
+  DokumentPoziomCen
+  DokumentPozycjaDokumentu
+  DokumentProdukcyjnyDokumentKRW
+  DokumentProdukcyjnyDokumentPW
+  DokumentProdukcyjnyDokumentRozchodujacy
+  DokumentProdukcyjnyKursWalutyDokumentu
+  DokumentProdukcyjnyKursWalutyDokumentu1
+  DokumentProdukcyjnyMagazyn
+  DokumentProdukcyjnyPoziomCen
+  DokumentProdukcyjnyPoziomCen1
+  DokumentProdukcyjnyPozycjaKomplet
+  DokumentProdukcyjny_DataPrzychodu
+  DokumentProdukcyjny_DataRozchodu
+  DokumentProdukcyjny_FunkcjaWyliczaniaCenySkladnikow
+  DokumentProdukcyjny_Id
+  DokumentProdukcyjny_MagazynSkladnikowId
+  DokumentProdukcyjny_PoziomCenSkladnikowId
+  DokumentProdukcyjny_PoziomCenUslugId
+  DokumentPrzekazania
+  DokumentPrzeznaczenieMediaDokumentu
+  DokumentPrzeznaczenieMediaDokumentu_MediaDokument
+  DokumentPrzeznaczenieMediaDokumentu_PrzeznaczenieMediaDokumentu
+  DokumentPrzyczynaZwolnieniaVAT
+  DokumentPrzyjecia
+  DokumentPrzyjeciaId
+  DokumentWGrupieDokumentowOdKlientaPortalBiura2DokumentOdKlienta
+  DokumentWGrupieDokumentowOdKlientaPortalBiura2GrupaDokumentowOdKlienta
+  DokumentWGrupieDokumentowZPortaluFirmy
+  DokumentWGrupieDokumentowZPortaluFirmyPortalFirmyDokumentZPortaluFirmy
+  DokumentWGrupieDokumentowZPortaluFirmyPortalFirmyGrupaDokumentowZPortaluFirmy
+  DokumentWZ
+  DokumentWZDokumentHandlowy
+  DokumentWZDokumentKWZ
+  DokumentWZ_OdbiorSprzedazyBraki_Id
+  DokumentWaluta
+  DokumentWewnetrzny
+  DokumentWindykacyjny
+  DokumentWindykacyjnyBibliotekaZalacznikowSet
+  DokumentWindykacyjnyDokumentDoKsiegowania
+  DokumentWindykacyjnyFlagHeadersSet
+  DokumentWindykacyjnyFlagiWlasneSet
+  DokumentWindykacyjnyFormaPlatnosci
+  DokumentWindykacyjnyId
+  DokumentWindykacyjnyKomentarzeNexoSet
+  DokumentWindykacyjnyNaglowkiEncjiSet
+  DokumentWindykacyjnyOpisKsiegowyElementuDokumentu
+  DokumentWindykacyjnyPoziomWezwaniaDoZaplaty
+  DokumentWindykacyjnyPozycjaDokumentuWindykacyjnego
+  DokumentWindykacyjnyStatusyOdczytaniaKomentarzySet
+  DokumentWindykacyjnySzybkaPlatnoscDokumentuWindykacyjnego
+  DokumentWindykacyjnyWiadomoscSMS
+  DokumentWindykacyjny_Id
+  DokumentWstepny
+  DokumentWydrukowanyNiefiskalnie
+  DokumentWydrukowanyNiefiskalnieId
+  DokumentWykluczonePromocje
+  DokumentWykluczonePromocje_Dokument
+  DokumentWykluczonePromocje_Promocja
+  DokumentWymaganaWplata
+  DokumentWystawiony_Id
+  DokumentRWInwentaryzacja
+  DokumentRachunekBankowyKlienta
+  DokumentReczniePowiazanyDokumentElektroniczny
+  DokumentRozchodujacy
+  DokumentRozliczajacy
+  DokumentRozliczajacy_Id
+  DokumentRozrachunek
+  DokumentRozrachunku
+  DokumentMMP_DokumentMMW_Id
+  DokumentMMP_PrzesuniecieJednokrokowe
+  DokumentMMW
+  DokumentMMWDokumentMMP
+  DokumentMMW_MagazynDocelowyId
+  DokumentMMW_OddzialDocelowyId

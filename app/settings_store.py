@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import secrets
 from copy import deepcopy
 from pathlib import Path
 from typing import Any
@@ -8,16 +9,15 @@ from typing import Any
 
 DEFAULT_SETTINGS: dict[str, Any] = {
     "schedule": {"weekday": "monday", "hour": 7, "minute": 0, "enabled": False},
-    "ftp": {
-        "protocol": "sftp",
-        "host": "",
-        "port": 22,
-        "username": "",
-        "password": "",
-        "products_path": "/export/products.csv",
-        "sales_path": "/export/sales.csv",
+    "nexo_connector": {
+        "enabled": False,
+        "base_url": "http://127.0.0.1:8765",
+        "api_token": "",
+        "warehouses": [],
+        "exclude_types": ["US"],
+        "sales_days": 365,
+        "aggregate_warehouses": True,
     },
-    "cloud": {"provider": "none", "folder": "OrdersManagement", "retention_weeks": 26},
     "mail": {
         "smtp_host": "",
         "smtp_port": 587,
@@ -26,31 +26,55 @@ DEFAULT_SETTINGS: dict[str, Any] = {
         "from_addr": "",
         "report_recipients": [],
         "alert_recipients": [],
+        "report_subject": "Cotygodniowy raport zamówień — {date}",
+        "report_body": "<p>Dzień dobry,</p><p>Przesyłamy cotygodniowy raport zamówień.</p>",
+        "report_template": "professional",
+        "alert_subject": "Orders Management — błąd przetwarzania",
+        "alert_body": "Wystąpił błąd podczas generowania raportu. Szczegóły są dostępne w panelu.",
     },
     "panel_users": ["admin"],
     "column_map": {
         "products": {
-            "id": "id",
-            "sku": "sku",
-            "ean": "ean",
-            "name": "nazwa",
-            "producer": "producent",
-            "group": "grupa",
-            "active": "aktywny",
-            "eol": "koniec_zycia",
-            "stock": "stan",
-            "reserved": "rezerwacje",
-            "min_qty": "ilosc_min",
-            "moq": "moq",
-            "order_increment": "order_increment",
-            "lead_time_days": "czas_dostawy_dni",
+            "id": "ID_produktu",
+            "sku": "SKU",
+            "ean": "EAN",
+            "name": "Nazwa",
+            "producer": "Nazwa_producenta",
+            "group": "Grupa_produktu",
+            "warehouse": "",
+            "active": "Status_produktu",
+            "eol": "",
+            "stock": "Stan_magazynowy",
+            "reserved": "Rezerwacja",
+            "available": "Ilosc_dostepna",
+            "inbound_qty": "",
+            "min_qty": "",
+            "moq": "",
+            "order_increment": "",
+            "lead_time_days": "",
         },
         "sales": {
-            "id": "id",
-            "date": "data",
-            "qty": "ilosc",
-            "net_value": "wartosc_netto",
-            "cost": "koszt",
+            "id": "AsortymentAktualnyId",
+            "date": "DataSprzedazy",
+            "qty": "IloscWJednostceBazowej",
+            "net_value": "Wartosc_Netto_PLN",
+            "cost": "KosztEwidencyjny",
+        },
+        "purchase_orders": {
+            "id": "",
+            "qty": "",
+            "qty_open": "",
+            "eta": "",
+            "status": "",
+            "document_symbol": "",
+            "supplier": "",
+            "warehouse": "",
+        },
+        "stock_moves": {
+            "id": "",
+            "date": "",
+            "qty": "",
+            "move_type": "",
         },
     },
     "abc_xyz": {
@@ -67,22 +91,36 @@ DEFAULT_SETTINGS: dict[str, Any] = {
         "auto_min_abc": ["A", "B"],
         "auto_min_xyz": ["X"],
         "auto_min_tx_days": 5,
-        "seasonality_enabled": False,
+        "seasonality_enabled": True,
+        "decay_threshold": 0.75,
+        "availability_strength": 0.8,
+        "order_formula": (
+            "daily_demand_adj * (lead_time_days + buffer_days * volatility_factor) "
+            "- free_stock - inbound_qty + backlog_qty - reserved_horizon"
+        ),
     },
-    "ai": {"enabled": False, "provider": "none", "model": "", "api_key": ""},
     "stats": {"week_compare_from": ""},
 }
+
+
+def ensure_connector_token(cfg: dict[str, Any]) -> dict[str, Any]:
+    nc = cfg.setdefault("nexo_connector", {})
+    if not (nc.get("api_token") or "").strip():
+        nc["api_token"] = secrets.token_urlsafe(32)
+    return cfg
 
 
 def load_settings(path: Path) -> dict[str, Any]:
     if not path.exists():
         data = deepcopy(DEFAULT_SETTINGS)
+        ensure_connector_token(data)
         save_settings(path, data)
         return data
     with path.open("r", encoding="utf-8") as f:
         stored = json.load(f)
     merged = deepcopy(DEFAULT_SETTINGS)
     _deep_update(merged, stored)
+    ensure_connector_token(merged)
     return merged
 
 

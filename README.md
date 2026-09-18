@@ -7,15 +7,16 @@ Cotygodniowe propozycje zamówień na podstawie sprzedaży, bufora, lead time, M
 ## Co jest w wersji testowej (0.1.0-test)
 
 - Panel WWW (dashboard, ustawienia, licencja)
-- Pipeline: CSV produkty + sprzedaż → ABC/XYZ → sugestia ilości → Excel
+- Pipeline: JSON produkty + sprzedaż → ABC/XYZ → sugestia ilości → Excel
 - Tryby wiersza: `auto-ready` / `do weryfikacji` / `skip`
-- Sample data do odpalenia bez FTP
-- Upload własnych CSV
+- Źródło danych: **Nexo Connector** (Windows, SQL → 4 JSON)
+- Wysyłka raportu: **SMTP**
+- Sample data / upload plików
 - System kluczy licencyjnych HMAC (`OM1....`)
 - Docker / docker-compose pod VPS
 - Logi INFO/WARN/ERROR
 
-**Jeszcze nie w tej wersji (kolejne iteracje):** realny SFTP/FTPS, SMTP, Google/OneDrive, cron, prawdziwe AI API, edytor mapowania kolumn w UI.
+**Na później:** cron/harmonogram produkcyjny, dopracowanie łącznika Nexo.
 
 ## Szybki start (lokalnie)
 
@@ -28,17 +29,19 @@ copy .env.example .env
 uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
 ```
 
-Otwórz: http://127.0.0.1:8000 → **Uruchom teraz**.
+Otwórz: http://127.0.0.1:8000 → **Przelicz raport**.
 
-## Docker (pod VPS)
+## Docker (serwer / VPS)
 
 ```bash
 cp .env.example .env
-# ustaw SECRET_KEY oraz LICENSE_SIGNING_SECRET
+# ustaw SECRET_KEY, LICENSE_SIGNING_SECRET, ADMIN_PASSWORD
 docker compose up -d --build
 ```
 
-Aplikacja: http://VPS:8000
+Aplikacja: `http://SERWER:8000`  
+Dane trwałe: volume `om_data` → `/app/data`.  
+**Nexo Connector** działa osobno na Windows (przy bazie Nexo), nie w kontenerze — w panelu podajesz jego URL + token.
 
 ## Licencjonowanie (sprzedaż B2B)
 

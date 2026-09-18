@@ -1,0 +1,5 @@
+[
+  {"id": "1001", "date": "2026-06-01", "qty": 48, "move_type": "receipt", "document_symbol": "PZ 1/MAG/06/2026"},
+  {"id": "1001", "date": "2026-07-15", "qty": -12, "move_type": "issue", "document_symbol": "WZ 5/MAG/07/2026"},
+  {"id": "1002", "date": "2026-05-20", "qty": 16, "move_type": "receipt", "document_symbol": "PZ 2/MAG/05/2026"}
+]

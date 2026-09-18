@@ -4,7 +4,10 @@ WORKDIR /app
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    DATA_DIR=/app/data
+    DATA_DIR=/app/data \
+    APP_ENV=production \
+    HOST=0.0.0.0 \
+    PORT=8000
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
@@ -14,6 +17,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY app ./app
+COPY connector ./connector
 COPY sample_data ./sample_data
 COPY LICENSE README.md ./
 

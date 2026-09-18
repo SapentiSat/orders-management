@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div><p class="overline">ANALITYKA</p><h1>Raporty</h1><p class="muted">Historia raportów, rankingi i rekomendacje zamówień.</p></div>
+  <form method="post" action="/run"><button class="btn primary">↻ Nowy raport</button></form>
+</section>
+{% if last_run and last_run.analytics %}
+{% set a = last_run.analytics %}
+<div class="grid2">
+  <section class="card">
+    <div class="card-head"><div><h3>Porównanie okresów</h3><p>{{ a.period.current }} vs {{ a.period.previous }}</p></div></div>
+    <table>
+      <thead><tr><th>Metryka</th><th>Ten tydzień</th><th>Poprzedni</th><th>Zmiana</th></tr></thead>
+      <tbody>
+        <tr><td>Sztuki</td><td>{{ a.current.qty|round|int }}</td><td>{{ a.previous.qty|round|int }}</td><td>{{ a.changes.qty }}%</td></tr>
+        <tr><td>Netto</td><td>{{ '{:,.0f}'.format(a.current.net).replace(',', ' ') }} zł</td><td>{{ '{:,.0f}'.format(a.previous.net).replace(',', ' ') }} zł</td><td>{{ a.changes.net }}%</td></tr>
+        <tr><td>Marża</td><td>{{ '{:,.0f}'.format(a.current.margin).replace(',', ' ') }} zł</td><td>{{ '{:,.0f}'.format(a.previous.margin).replace(',', ' ') }} zł</td><td>{{ a.changes.margin }}%</td></tr>
+        <tr><td>Aktywne SKU</td><td>{{ a.current.products }}</td><td>{{ a.previous.products }}</td><td>{{ a.changes.products }}%</td></tr>
+      </tbody>
+    </table>
+  </section>
+  <section class="card">
+    <div class="card-head"><div><h3>Pliki Excel</h3><p>ostatnie wygenerowane raporty</p></div></div>
+    {% for file in exports %}
+    <a class="action-link" href="/exports/{{ file }}"><span>⇩</span><div><strong>{{ file }}</strong><small>Dashboard + tabela zamówień</small></div></a>
+    {% else %}<p class="empty">Brak plików.</p>{% endfor %}
+  </section>
+</div>
+<section class="card" style="margin-top:14px">
+  <div class="card-head">
+    <div>
+      <h3>Top 10 sprzedaży</h3>
+      <p>bieżący tydzień według sztuk</p>
+      <p class="card-tip">Po co: ranking hitów. Kiedy: kontrola, czy top rotuje i nie „wypada” ze stanu.</p>
+    </div>
+  </div>
+  <table>
+    <thead><tr><th>#</th><th>SKU</th><th>Produkt</th><th>Sztuki</th><th>Netto</th></tr></thead>
+    <tbody>{% for p in a.top_products %}<tr><td>{{ loop.index }}</td><td>{{ p.sku }}</td><td>{{ p.name }}</td><td>{{ p.qty|round|int }}</td><td>{{ '{:,.0f}'.format(p.net).replace(',', ' ') }} zł</td></tr>{% endfor %}</tbody>
+  </table>
+</section>
+<section class="card" style="margin-top:14px">
+  <div class="card-head">
+    <div>
+      <h3>Rekomendacje zamówień</h3>
+      <p>podgląd ostatniego runu — współczynniki podświetlone</p>
+      <p class="card-tip">Fioletowe wartości ≠ 1,00 oznaczają aktywną korektę (dostępność ↑, spadek ↓, sezon, zmienność buforu).</p>
+    </div>
+  </div>
+  <div class="table-wrap"><table>
+    <thead>
+      <tr>
+        <th>SKU</th><th>Nazwa</th><th>ABC/XYZ</th><th>Tryb</th><th>Sugestia</th><th>Wolny stan</th><th>LT</th>
+        <th class="th-coeff">Dostępność</th><th class="th-coeff">Spadek</th><th class="th-coeff">Sezon</th><th class="th-coeff">Zmienność</th>
+        <th>Uwagi</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in last_run.preview %}
+      <tr>
+        <td>{{ r.sku }}</td><td>{{ r.name }}</td><td>{{ r.ABC_XYZ }}</td>
+        <td><span class="pill mode-{{ r.mode|replace(' ', '-') }}">{{ r.mode }}</span></td>
+        <td>{{ r.suggested_qty }}</td><td>{{ r.free_stock }}</td><td>{{ r.lead_time_days }}</td>
+        <td><span class="coeff-badge {% if (r.availability_factor or 1)|float > 1.05 %}hot{% elif (r.availability_factor or 1)|float < 0.95 %}cool{% endif %}">{{ '%.2f'|format(r.availability_factor or 1) }}</span></td>
+        <td><span class="coeff-badge {% if (r.demand_decay_factor or 1)|float < 0.95 %}cool{% elif (r.demand_decay_factor or 1)|float > 1.05 %}hot{% endif %}">{{ '%.2f'|format(r.demand_decay_factor or 1) }}</span></td>
+        <td><span class="coeff-badge {% if (r.seasonality_factor or 1)|float > 1.05 %}hot{% elif (r.seasonality_factor or 1)|float < 0.95 %}cool{% endif %}">{{ '%.2f'|format(r.seasonality_factor or 1) }}</span></td>
+        <td><span class="coeff-badge {% if (r.volatility_factor or 1)|float > 1.05 %}hot{% endif %}">{{ '%.2f'|format(r.volatility_factor or 1) }}</span></td>
+        <td>{{ r.note }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table></div>
+</section>
+{% else %}
+<section class="empty-state card"><div>▤</div><h2>Brak raportów</h2><p>Uruchom pierwszy raport z dashboardu.</p></section>
+{% endif %}
+{% endblock %}

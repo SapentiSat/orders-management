@@ -38,3 +38,10 @@ Thumbs.db
 
 # Docker volumes
 postgres-data/
+
+# Local Nexo dumps / secrets
+DANE POBRANE Z BAZY/
+connector/__pycache__/
+connector/data/
+connector/dist/
+*.pyc

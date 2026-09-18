@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div>
+    <p class="overline">AUDYT SYSTEMU</p>
+    <h1>Logi</h1>
+    <p class="muted">Historia zdarzeń i zmian ustawień z ostatnich 30 dni.</p>
+  </div>
+</section>
+
+<div class="kpi-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 14px;">
+  <article class="kpi"><div class="kpi-icon blue">☰</div><div><span>Wszystkie (30 dni)</span><strong>{{ counts.all }}</strong></div></article>
+  <article class="kpi"><div class="kpi-icon violet">✎</div><div><span>Zmiany ustawień</span><strong>{{ counts.change }}</strong></div></article>
+  <article class="kpi"><div class="kpi-icon amber">!</div><div><span>Błędy</span><strong>{{ counts.error }}</strong></div></article>
+</div>
+
+<section class="card">
+  <form class="logs-filters" method="get" action="/logs">
+    <label>Poziom
+      <select name="level">
+        {% for value, label in [('all','Wszystkie'),('CHANGE','Zmiany'),('INFO','INFO'),('WARN','WARN'),('ERROR','ERROR')] %}
+        <option value="{{ value }}" {% if selected_level == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <label>Kategoria
+      <select name="category">
+        {% for value, label in [('all','Wszystkie'),('change','Zmiany'),('system','System'),('integration','Integracje')] %}
+        <option value="{{ value }}" {% if selected_category == value %}selected{% endif %}>{{ label }}</option>
+        {% endfor %}
+      </select>
+    </label>
+    <button class="btn primary" type="submit">Filtruj</button>
+  </form>
+
+  {% if logs %}
+  <div class="table-wrap">
+    <table class="logs-table">
+      <thead>
+        <tr>
+          <th>Czas</th>
+          <th>Poziom</th>
+          <th>Kategoria</th>
+          <th>Wiadomość</th>
+          <th>Szczegóły</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for l in logs %}
+        <tr>
+          <td class="mono">{{ l.ts[:19]|replace('T', ' ') }}</td>
+          <td><span class="lvl {{ l.level }}">{{ l.level }}</span></td>
+          <td>{{ l.category or 'system' }}</td>
+          <td>{{ l.message }}</td>
+          <td class="log-details">
+            {% if l.context and l.context.changes %}
+              <details>
+                <summary>{{ l.context.count or l.context.changes|length }} zmian</summary>
+                <ul>
+                  {% for ch in l.context.changes %}
+                  <li><code>{{ ch.field }}</code>: {{ ch.from }} → {{ ch.to }}</li>
+                  {% endfor %}
+                </ul>
+              </details>
+            {% elif l.context %}
+              <code>{{ l.context }}</code>
+            {% else %}
+              —
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="empty">Brak logów dla wybranych filtrów.</p>
+  {% endif %}
+</section>
+{% endblock %}

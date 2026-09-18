@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1001",
+    "qty": 24,
+    "qty_open": 24,
+    "eta": "2026-09-15",
+    "status": "open",
+    "document_symbol": "ZD 12/MAG/08/2026",
+    "supplier": "GardenPro"
+  },
+  {
+    "id": "1002",
+    "qty": 8,
+    "qty_open": 4,
+    "eta": "2026-10-01",
+    "status": "open",
+    "document_symbol": "ZD 14/MAG/08/2026",
+    "supplier": "GardenPro"
+  }
+]

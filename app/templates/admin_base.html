@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{% block title %}Vendor Admin — {{ product }}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/app.css" />
+</head>
+<body class="vendor-admin">
+  <aside class="sidebar admin-sidebar">
+    <div class="brand">
+      <span class="brand-mark admin-mark">VA</span>
+      <span><strong>Vendor</strong><small>Admin only</small></span>
+    </div>
+    <nav class="side-nav">
+      <a class="{% if request.url.path == '/admin' %}active{% endif %}" href="/admin"><span>◈</span> Licencje i firmy</a>
+    </nav>
+    <div class="side-bottom">
+      <p class="admin-note">Panel tylko dla właściciela produktu. Firmy-klienci go nie widzą.</p>
+      <form method="post" action="/admin/logout">
+        <button class="btn" type="submit" style="width:100%">Wyloguj</button>
+      </form>
+      <div class="version">Wersja {{ version }}</div>
+    </div>
+  </aside>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <span class="environment admin-env">PANEL VENDORA — NIEUDOSTĘPNIAJ FIRMIE</span>
+      </div>
+      <div class="top-actions">
+        <span class="status-dot"></span><span>Sesja admina</span>
+      </div>
+    </header>
+    <main class="wrap">
+      {% block content %}{% endblock %}
+    </main>
+  </div>
+</body>
+</html>

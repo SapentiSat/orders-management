@@ -1,0 +1,10 @@
+﻿python :   File "<string>", line 6
+At C:\Users\valia\AppData\Local\Temp\ps-script-f13b1c3e-0416-4b7c-b0d5-7317c83846b9.ps1:109 char:32
++ $env:PYTHONIOENCODING='utf-8'; python -c "
++                                ~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  File "<string>", line 6:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+    m = re.search(r'<a name=" 8D2019D4\></a><h2
+                  ^
+SyntaxError: unterminated string literal (detected at line 6)
